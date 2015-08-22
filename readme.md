@@ -140,7 +140,7 @@ trades = client.public.trades('LTCXRP')
 Get spread data for a given asset pair
 
 ```ruby
-spread = client.pbulic.spread('LTCXRP')
+spread = client.public.spread('LTCXRP')
 ```
 
 
