@@ -28,7 +28,7 @@ module KrakenClient
         required_opts = %w{ pair type ordertype volume }
         leftover = required_opts - opts.keys.map(&:to_s)
         if leftover.length > 0
-          raise ArgumentError.new("Required options, not given. Input must include #{leftover}")
+          fail ArgumentError, "Required options, not given. Input must include #{leftover}"
         end
         perform('AddOrder', opts)
       end
@@ -38,7 +38,6 @@ module KrakenClient
       def url_path(method)
         '/' + config.api_version.to_s + '/private/' + method
       end
-
     end
   end
 end

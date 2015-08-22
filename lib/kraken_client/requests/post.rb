@@ -3,6 +3,8 @@ module KrakenClient
     class Post < Base
 
       def call(url, endpoint_name, options)
+        super
+
         @url           = url
         @endpoint_name = endpoint_name
 

@@ -2,7 +2,9 @@ module KrakenClient
   module Requests
     class Get < Base
 
-      def call(url, params)
+      def call(url, params, *)
+        super
+
         HTTParty.get(url, query: params)
       end
 

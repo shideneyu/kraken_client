@@ -1,18 +1,28 @@
+require 'observer'
+
 module KrakenClient
   module Requests
     class Base
 
-      attr_reader :config, :method, :type, :endpoint_name, :url
+      include Observable
+
+      attr_reader :config, :type, :endpoint_name, :url
 
       def initialize(config, type)
         @config = config
         @type = type
+        add_observer(config.limiter_interface)
       end
 
       def self.build(config, type)
         type = self.type(type)
 
         "KrakenClient::Requests::#{type}".constantize.new(config, type)
+      end
+
+      def call(url, endpoint_name, options = nil)
+        changed
+        notify_observers(url.split('/').last)
       end
 
       private

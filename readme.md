@@ -41,24 +41,54 @@ KrakenClient.configure do
       @api_secret  = ENV['KRAKEN_API_SECRET']
       @base_uri    = 'https://api.kraken.com'
       @api_version = 0
+      @limiter     = true
+      @tier        = 2
 end
 ```
 
 By default, the default values are the ones described in the above example.
 
+You can also pass any of those options inline when loading an instance of KrakenClient.
+
+```ruby
+KrakenClient.load({base_uri: 'https://api.kraken.com', tier: 3}).config.tier
+```
+
+
 **/!\\ Important Note /!\\** If you wish to use the Private Endpoints, you need to specify an API Key, or an exception will be raised. 
+
+### Call Rate Limiter ###
+
+Kraken has implemented a security which limit API users to make too much requests to the server. Each user has a counter (which is bigger depending on your tier). Each call increments your counter, and if your counter reaches its limit, you are blocked for 15 minutes.
+
+To prevent this, `KrakenClient` has a safeguard, which queue the request which should in theory be blocked and is executed two second later.
+
+If you want to disable this option, pass the `limiter` variable in the configuration to false.
+
+```ruby
+KrakenClient.load({limiter: false}).config.tier
+```
+
+Also, this limiter is activated by default. You would like to specify your tier, and `KrakenClient` will automatically make the required adjustments. The default `tier` is 2.
+
+```ruby
+KrakenClient.load({tier: 3}).config.tier
+```
+
+For more information, please consult the [Kraken official documentation](https://support.kraken.com/hc/en-us/articles/206548367-What-is-the-API-call-rate-limit-).
 
 ### Examples ###
 
 In all our examples henceforward, we consider this variable to be a loaded instance of `KrakenClient`
 
-    client = KrakenClient.load
+```ruby
+client = KrakenClient.load
+```
+
+### *Public Endpoints* ###
 
 
-#### *Public Endpoints* ####
-
-
-#### Server Time
+##### Server Time
 
 This functionality is provided by Kraken to to aid in approximating the skew time between the server and client.
 
@@ -69,7 +99,7 @@ time.unixtime #=> 1393056191
 time.rfc1123 #=> "Sat, 22 Feb 2014 08:28:04 GMT"
 ```
 
-#### Asset Info
+##### Asset Info
 
 Returns the assets that can be traded on the exchange. This method can be passed ```info```, ```aclass``` (asset class), and ```asset``` options. An example below is given for each:
 
@@ -77,19 +107,19 @@ Returns the assets that can be traded on the exchange. This method can be passed
 assets = client.public.assets
 ```
 
-#### Asset Pairs
+##### Asset Pairs
 
 ```ruby
 pairs = client.public.asset_pairs
 ```
 
-#### Ticker Information
+##### Ticker Information
 
 ```ruby
 ticker_data = client.public.ticker('XLTCXXDG, ZUSDXXVN')
 ```
 
-#### Order Book
+##### Order Book
 
 Get market depth information for given asset pairs
 
@@ -97,7 +127,7 @@ Get market depth information for given asset pairs
 depth_data = client.public.order_book('LTCXRP')
 ```
 
-#### Trades
+##### Trades
 
 Get recent trades
 
@@ -105,7 +135,7 @@ Get recent trades
 trades = client.public.trades('LTCXRP')
 ```
 
-#### Spread
+##### Spread
 
 Get spread data for a given asset pair
 
@@ -114,9 +144,9 @@ spread = client.pbulic.spread('LTCXRP')
 ```
 
 
-#### *Private Endpoints* ####
+#### Private Endpoints ####
 
-#### Balance
+##### Balance
 
 Get account balance for each asset
 Note: Rates used for the floating valuation is the midpoint of the best bid and ask prices
@@ -125,7 +155,7 @@ Note: Rates used for the floating valuation is the midpoint of the best bid and 
 balance = kraken.balance
 ```
 
-#### Trade Balance
+##### Trade Balance
 
 Get account trade balance
 
@@ -133,19 +163,19 @@ Get account trade balance
 trade_balance = kraken.trade_balance
 ```
 
-#### Open Orders
+##### Open Orders
 
 ```ruby
 open_orders = kraken.open_orders
 ```
 
-#### Closed Orders
+##### Closed Orders
 
 ```ruby
 closed_orders = kraken.closed_orders
 ```
 
-#### Query Orders
+##### Query Orders
 
 See all orders
 
@@ -153,7 +183,7 @@ See all orders
 orders = kraken.query_orders
 ```
 
-#### Trades History
+##### Trades History
 
 Get array of all trades
 
@@ -161,7 +191,7 @@ Get array of all trades
 trades = kraken.trade_history
 ```
 
-#### Query Trades
+##### Query Trades
 
 **Input:** Comma delimited list of transaction (tx) ids
 
@@ -169,7 +199,7 @@ trades = kraken.trade_history
 trades = kraken.query_trades(tx_ids)
 ```
 
-#### Open Positions
+##### Open Positions
 
 **Input:** Comma delimited list of transaction (tx) ids
 
@@ -177,13 +207,13 @@ trades = kraken.query_trades(tx_ids)
 positions = kraken.open_positions(tx_ids)
 ```
 
-#### Ledgers Info
+##### Ledgers Info
 
 ```ruby
 ledgers = kraken.ledgers_info
 ```
 
-#### Ledgers Info
+##### Ledgers Info
 
 **Input:** Comma delimited list of ledger ids
 
@@ -191,7 +221,7 @@ ledgers = kraken.ledgers_info
 ledgers = kraken.query_ledgers(ledger_ids)
 ```
 
-#### Trade Volume
+##### Trade Volume
 
 **Input:** Comma delimited list of asset pairs
 
@@ -200,9 +230,10 @@ asset_pairs = 'XLTCXXDG, ZEURXXDG'
 volume = kraken.query_ledgers(asset_pairs)
 ```
 
-#### Add Order
+##### Add Order
 
 There are 4 required parameters for buying an order. The example below illustrates the most basic order. Please see the [Kraken documentation](https://www.kraken.com/help/api#add-standard-order) for the parameters required for more advanced order types.
+
 ```ruby
 # buying 0.01 XBT (bitcoin) for XRP (ripple) at market price
 opts = {
@@ -213,10 +244,9 @@ opts = {
 }
 
 kraken.add_order(opts)
-
 ```
 
-#### Cancel Order
+##### Cancel Order
 
 ```ruby
 kraken.cancel_order("UKIYSP-9VN27-AJWWYC")
@@ -225,9 +255,9 @@ kraken.cancel_order("UKIYSP-9VN27-AJWWYC")
 
 ## Credits
 
-This gem has been built by [Sidney SISSAOUI (shideneyu)](https://github.com/shideneyu). 
+This gem has been made by [Sidney SISSAOUI (shideneyu)](https://github.com/shideneyu). 
 
-Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other  [kraken_ruby](https://github.com/leishman/kraken_ruby) contributors for having established the base of **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
+Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other  [kraken_ruby](https://github.com/leishman/kraken_ruby)  contributors for their gem, which helped me to have a nice base to begin **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
 If you want to be part of those credits, do not hesitate to contribute by doing some pull requests ;) !
 
 

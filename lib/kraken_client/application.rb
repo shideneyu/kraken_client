@@ -21,7 +21,7 @@ module KrakenClient
     end
 
     def config
-      ::KrakenClient.config.dup
+      @config ||= ::KrakenClient.config.dup
     end
 
     private
