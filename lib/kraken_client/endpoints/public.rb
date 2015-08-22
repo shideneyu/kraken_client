@@ -9,11 +9,17 @@ module KrakenClient
       end
 
       def endpoint_names
-        [
-          :Time, :Assets, :AssetPairs, :Ticker,
-          :Depth, :Trades, :Spread
-        ]
+        {
+          :Time       => :server_time,
+          :AssetPairs => :asset_pairs,
+          :Depth      => :order_book,
+          :Ticker     => :ticker,
+          :Trades     => :trades,
+          :Spread     => :spread,
+          :Assets     => :assets,
+        }
       end
+
 
       private
 

@@ -8,11 +8,20 @@ module KrakenClient
       end
 
       def endpoint_names
-        [
-          :Balance, :TradeBalance, :OpenOrders ,:ClosedOrders, :QueryOrders,
-          :TradesHistory, :QueryTrades, :OpenPositions, 
-          :Ledgers, :QueryLedgers, :TradeVolume, :CancelOrder
-        ]
+        {
+          :Balance       => :balance,
+          :TradeBalance  => :trade_balance,
+          :OpenOrders    => :open_orders,
+          :ClosedOrders  => :closed_orders,
+          :QueryOrders   => :query_orders,
+          :TradesHistory => :trades_history,
+          :QueryTrades   => :query_trades,
+          :OpenPositions => :open_positions,
+          :Ledgers       => :ledgers,
+          :QueryLedgers  => :query_ledgers,
+          :TradeVolume   => :trade_volume,
+          :CancelOrder   => :cancel_order,
+        }
       end
 
       def add_order(opts={})

@@ -10,7 +10,7 @@ describe KrakenClient::Endpoints::Public do
   let(:client) { kraken.public }
 
   it "gets the proper server time" do
-    kraken_time = DateTime.parse(client.time.rfc1123)
+    kraken_time = DateTime.parse(client.server_time.rfc1123)
     utc_time = Time.now.getutc
     expect(kraken_time.day).to eq utc_time.day
     expect(kraken_time.hour).to eq utc_time.hour
@@ -21,7 +21,7 @@ describe KrakenClient::Endpoints::Public do
   end
 
   it "gets list of asset pairs" do
-    expect(client.assetpairs).to respond_to :XXBTZEUR
+    expect(client.asset_pairs).to respond_to :XXBTZEUR
   end
 
   it "gets public ticker data for given asset pairs" do
@@ -31,7 +31,7 @@ describe KrakenClient::Endpoints::Public do
   end
 
   it "gets order book data for a given asset pair" do
-    order_book = client.depth(pair: 'XXBTZEUR')
+    order_book = client.order_book(pair: 'XXBTZEUR')
     expect(order_book.XXBTZEUR).to respond_to :asks
   end
 

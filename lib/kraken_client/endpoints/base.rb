@@ -18,9 +18,9 @@ module KrakenClient
       private
 
       def set_methods
-        endpoint_names.each do |name|
-           self.class.send(:define_method, name.downcase) do |args = {}|
-            perform(name.to_s, args)
+        endpoint_names.each do |method, method_alias|
+           self.class.send(:define_method, method_alias) do |args = {}|
+            perform(method.to_s, args)
           end
         end      
       end
