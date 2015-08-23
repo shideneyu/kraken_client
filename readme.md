@@ -127,7 +127,7 @@ If you ever need to see the full documentation for the possible parameters, plea
 
 A `KrakenClient::MissingParameter` exception will be raised along with the missing parameters if a required parameter is not passed.
 
-### *Public Endpoints* ###
+### Public Endpoints ###
 
 
 ##### Server Time
@@ -297,7 +297,8 @@ client.private.cancel_order("UKIYSP-9VN27-AJWWYC")
 
 ## Donations
 
-If you like the work that has been done, do not hesitate in paying me a Coffee, I'd gladly accept it :) I accept Bitcoins.
+If you like the work that has been done, do not hesitate in paying me a Coffee, I'd gladly accept it :)
+
 ![bitcoinadress](http://image.noelshack.com/fichiers/2015/34/1440342556-bitcoinadress.png)
 
 Bitcoin Adress: 1LxffuH2C44mFNTYe1NtDz7FeWScCFZqM8
