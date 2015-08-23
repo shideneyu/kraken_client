@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.kraken.com/0/public/Assets
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 23 Aug 2015 00:51:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc59cc76e11ec397a846d684fd26e21251440291079; expires=Mon, 22-Aug-16
+        00:51:19 GMT; path=/; domain=.kraken.com; HttpOnly
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - 21a2d41182e31025-CDG
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"KFEE":{"aclass":"currency","altname":"FEE","decimals":2,"display_decimals":2},"XETH":{"aclass":"currency","altname":"ETH","decimals":10,"display_decimals":5},"XLTC":{"aclass":"currency","altname":"LTC","decimals":10,"display_decimals":5},"XNMC":{"aclass":"currency","altname":"NMC","decimals":10,"display_decimals":5},"XSTR":{"aclass":"currency","altname":"STR","decimals":8,"display_decimals":5},"XXBT":{"aclass":"currency","altname":"XBT","decimals":10,"display_decimals":5},"XXDG":{"aclass":"currency","altname":"XDG","decimals":8,"display_decimals":2},"XXRP":{"aclass":"currency","altname":"XRP","decimals":8,"display_decimals":5},"XXVN":{"aclass":"currency","altname":"XVN","decimals":4,"display_decimals":2},"ZCAD":{"aclass":"currency","altname":"CAD","decimals":4,"display_decimals":2},"ZEUR":{"aclass":"currency","altname":"EUR","decimals":4,"display_decimals":2},"ZGBP":{"aclass":"currency","altname":"GBP","decimals":4,"display_decimals":2},"ZJPY":{"aclass":"currency","altname":"JPY","decimals":2,"display_decimals":0},"ZKRW":{"aclass":"currency","altname":"KRW","decimals":2,"display_decimals":0},"ZUSD":{"aclass":"currency","altname":"USD","decimals":4,"display_decimals":2}}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 00:51:20 GMT
+recorded_with: VCR 2.9.3

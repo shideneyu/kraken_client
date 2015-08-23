@@ -22,11 +22,12 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'spectus'
   spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'webmock'
+  spec.add_development_dependency 'vcr'
 
   spec.add_dependency 'httparty'
   spec.add_dependency 'hashie'
   spec.add_dependency 'addressable'
-  spec.add_dependency 'pry'
   spec.add_dependency 'activesupport'
 
 end

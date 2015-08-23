@@ -6,7 +6,6 @@ PATH
       addressable
       hashie
       httparty
-      pry
 
 GEM
   remote: https://rubygems.org/
@@ -19,6 +18,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     coderay (1.1.0)
+    crack (0.3.1)
     hashie (3.4.2)
     httparty (0.13.5)
       json (~> 1.8)
@@ -40,6 +40,10 @@ GEM
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    vcr (2.9.3)
+    webmock (1.9.0)
+      addressable (>= 2.2.7)
+      crack (>= 0.1.7)
 
 PLATFORMS
   ruby
@@ -53,3 +57,5 @@ DEPENDENCIES
   pry
   rake
   spectus
+  vcr
+  webmock
