@@ -1,9 +1,11 @@
+require 'active_support/inflector'
 require 'base64'
 require 'securerandom'
 require 'addressable/uri'
 require 'httparty'
 require 'hashie'
 require 'pry'
+
 
 module KrakenClient
   class Application

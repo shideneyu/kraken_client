@@ -1,8 +1,7 @@
-require 'find'
-require 'active_support/inflector'
+ruby_project_files = Dir[File.join(File.dirname(__FILE__), '**', '*.rb')]
 
-Find.find('./lib').select { |p| /.*\.rb$/ =~ p }.each do |path|
-  require(path)
+ruby_project_files.sort_by!{ |m| m.downcase }.each do |path|
+  require_relative path
 end
 
 module KrakenClient
