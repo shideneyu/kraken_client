@@ -1,5 +1,5 @@
-
 # **KrakenClient**
+[![Gem Version](https://badge.fury.io/rb/kraken_client.svg)](http://badge.fury.io/rb/kraken_client)
 
 `KrakenClient` is a **Ruby** wrapper of the Kraken API. Kraken is a market exchange site serving those trading with Crypto-Currencies, such as **Bitcoin**.
 

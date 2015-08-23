@@ -1,4 +1,5 @@
-require_relative File.join '..', '..', 'lib', 'kraken_client'
+require_relative File.join 'support', 'coverage'
+require_relative File.join '..', 'lib', 'kraken_client'
 require 'spectus'
 require 'vcr'
 require 'webmock'

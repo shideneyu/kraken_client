@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kraken_client (0.1.1)
+    kraken_client (0.2.0)
       activesupport
       addressable
       hashie
@@ -19,6 +19,7 @@ GEM
     addressable (2.3.8)
     coderay (1.1.0)
     crack (0.3.1)
+    docile (1.1.5)
     hashie (3.4.2)
     httparty (0.13.5)
       json (~> 1.8)
@@ -34,6 +35,11 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rake (10.4.2)
+    simplecov (0.10.0)
+      docile (~> 1.1.0)
+      json (~> 1.8)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     slop (3.6.0)
     spectus (2.2.0)
       matchi (~> 0.0)
@@ -56,6 +62,7 @@ DEPENDENCIES
   kraken_client!
   pry
   rake
+  simplecov
   spectus
   vcr
   webmock
