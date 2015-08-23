@@ -2,6 +2,7 @@
 [![Gem Version](https://badge.fury.io/rb/kraken_client.svg)](http://badge.fury.io/rb/kraken_client)
 [![Code Climate](https://codeclimate.com/github/shideneyu/kraken_client/badges/gpa.svg)](https://codeclimate.com/github/shideneyu/kraken_client)
 [![Test Coverage](https://codeclimate.com/github/shideneyu/kraken_client/badges/coverage.svg)](https://codeclimate.com/github/shideneyu/kraken_client/coverage)
+[![Build Status](https://travis-ci.org/shideneyu/kraken_client.svg?branch=master)](https://travis-ci.org/shideneyu/kraken_client)
 
 `KrakenClient` is a **Ruby** wrapper of the Kraken API. Kraken is a market exchange site serving those trading with Crypto-Currencies, such as **Bitcoin**.
 
