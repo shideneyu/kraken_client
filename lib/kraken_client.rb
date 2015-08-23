@@ -2,7 +2,7 @@ require 'find'
 require 'active_support/inflector'
 
 Find.find('./lib').select { |p| /.*\.rb$/ =~ p }.each do |path|
-  require_relative("../" + path)
+  require(path)
 end
 
 module KrakenClient

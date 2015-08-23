@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kraken_client (1.0.0)
+    kraken_client (1.0.1)
       activesupport (~> 3.2)
       addressable
       hashie
