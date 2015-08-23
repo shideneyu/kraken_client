@@ -20,11 +20,13 @@ module KrakenClient
         }
       end
 
-
       private
 
       def url(endpoint_name)
         @url = config.base_uri + '/' + config.api_version.to_s + '/public/' + endpoint_name
+      end
+
+      def raise_exception(*)
       end
     end
   end
