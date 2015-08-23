@@ -16,12 +16,12 @@ module KrakenClient
           :QueryOrders   => [:query_orders,  params: [:txid]],
           :TradesHistory => :trades_history,
           :QueryTrades   => [:query_trades,  params: [:txid]],
-          :OpenPositions => :open_positions,
+          :OpenPositions => :open_positions, params: [:txid],
           :Ledgers       => :ledgers,
           :QueryLedgers  => [:query_ledgers, params: [:id]],
-          :TradeVolume   => [:trade_volume,  params: [:id]],
+          :TradeVolume   => :trade_volume,
+          :AddOrder      => [:add_order,     params: [:pair, :type, :ordertype, :volume]],
           :CancelOrder   => [:cancel_order,  params: [:txid]],
-          :AddOrder      => [:add_order,     params: [:pair, :type, :ordertype, :volume]]
         }
       end
 

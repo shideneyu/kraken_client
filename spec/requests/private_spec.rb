@@ -78,7 +78,7 @@ end
 
 # Trade Volume
 VCR.use_cassette("trade_volume") do
-  Spectus.this { client.trade_volume(id: 'XETHZEUR').count }.MUST Equal: 2
+  Spectus.this { client.trade_volume(pair: 'XETHZEUR').count }.MUST Equal: 4
 end
 
 # Add Order
