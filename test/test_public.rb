@@ -1,3 +1,5 @@
+require_relative 'test_helper'
+
 kraken = KrakenClient.load
 client = kraken.public
 
