@@ -4,7 +4,7 @@ require 'rake/testtask'
 Rake::TestTask.new do |t|
   t.pattern = File.join 'test', '**', 'test_*.rb'
   t.verbose = true
-  t.warning = true
+  t.warning = false
 end
 
 namespace :test do
