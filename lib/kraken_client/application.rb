@@ -17,6 +17,8 @@ module KrakenClient
     end
 
     def private(options = {})
+      requires_api_keys
+
       ::KrakenClient::Endpoints::Private.new(config, options)
     end
 
@@ -25,6 +27,16 @@ module KrakenClient
     end
 
     private
+
+    def requires_api_keys
+      return unless api_keys_missing?
+
+      fail KrakenClient::MissingApiKeys, 'This feature requires API credentials.'
+    end
+
+    def api_keys_missing?
+      !(config.api_key && config.api_secret)
+    end
 
     def set_config(params)
       params.each { |k, v| config.send("#{k}=", v) }
