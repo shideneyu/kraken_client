@@ -12,8 +12,8 @@ end
 
 # Testing Private Endpoints
 KrakenClient.configure do |config|
-  config.api_key    = 'COMPUTED'
-  config.api_secret = 'COMPUTED'
+  config.api_key    = ENV['KRAKEN_API_KEY']    || 'COMPUTED'
+  config.api_secret = ENV['KRAKEN_API_SECRET'] ||'COMPUTED'
 end
 
 kraken = KrakenClient.load
@@ -53,16 +53,15 @@ VCR.use_cassette("trades_history") do
 end
 
 # Query Trades
-VCR.use_cassette("query_orders") do
+VCR.use_cassette("query_trades") do
   Spectus.this do
-    order = client.query_orders({txid: 'O75MLD-64OIU-5O4JDM'})
-    order['OKRRJ6-MH3UH-DV6IKT'].status
-  end.MUST Eql: 'canceled'
+    order = client.query_trades({txid: 'THZPTW-BMF6X-VWMN5P'})
+    order['THZPTW-BMF6X-VWMN5P'].pair
+  end.MUST Eql: 'XETHZEUR'
 end
 
 # Open Positions
-
-#CANT TEST, NO TEST TRANSACTION FOUND
+#CANT TEST, PARAMS DO NOT WORK
 
 # Ledgers Info
 VCR.use_cassette("ledgers") do
