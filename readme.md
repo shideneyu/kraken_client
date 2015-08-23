@@ -5,7 +5,7 @@
 
 This gem tends to be a replacement for [kraken_ruby](https://github.com/leishman/kraken_ruby), another wrapper, from which it is originally forked from.
 
-It has every features of the latter gem, with improved readability, usability, maintenability, and fully speced.
+It has every features of the latter gem, with improved readability, usability, maintenability, and speced using the Awesome [Spectus gem](https://github.com/fixrb/spectus).
 
 
 ## Installation
