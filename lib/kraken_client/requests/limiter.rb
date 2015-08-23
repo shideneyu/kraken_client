@@ -12,7 +12,6 @@ module KrakenClient
 
       def update(endpoint_name)
         return unless config.limiter
-
         @endpoint_name = endpoint_name
 
         decrement_current_count
@@ -32,7 +31,10 @@ module KrakenClient
         @current_count -= value_to_decrement
 
         if current_count < 0
-          sleep 2
+          sleep value_to_decrement
+
+          @current_count = value_to_decrement
+
           update(endpoint_name)
         else
           refresh_current_count
@@ -64,9 +66,9 @@ module KrakenClient
 
       def seconds_to_decrement
         @decrement ||= case config.tier
-          when 0 then 3
-          when 1 then 3
-          when 2 then 3
+          when 0 then 5
+          when 1 then 5
+          when 2 then 5
           when 3 then 2
           when 4 then 1
         end

@@ -152,7 +152,7 @@ Get account balance for each asset
 Note: Rates used for the floating valuation is the midpoint of the best bid and ask prices
 
 ```ruby
-balance = kraken.balance
+balance = client.private.balance
 ```
 
 ##### Trade Balance
@@ -160,19 +160,19 @@ balance = kraken.balance
 Get account trade balance
 
 ```ruby
-trade_balance = kraken.trade_balance
+trade_balance = client.private.trade_balance
 ```
 
 ##### Open Orders
 
 ```ruby
-open_orders = kraken.open_orders
+open_orders = client.private.open_orders
 ```
 
 ##### Closed Orders
 
 ```ruby
-closed_orders = kraken.closed_orders
+closed_orders = client.private.closed_orders
 ```
 
 ##### Query Orders
@@ -180,7 +180,7 @@ closed_orders = kraken.closed_orders
 See all orders
 
 ```ruby
-orders = kraken.query_orders
+orders = client.private.query_orders
 ```
 
 ##### Trades History
@@ -188,7 +188,7 @@ orders = kraken.query_orders
 Get array of all trades
 
 ```ruby
-trades = kraken.trade_history
+trades = client.private.trade_history
 ```
 
 ##### Query Trades
@@ -196,7 +196,7 @@ trades = kraken.trade_history
 **Input:** Comma delimited list of transaction (tx) ids
 
 ```ruby
-trades = kraken.query_trades(tx_ids)
+trades = client.private.query_trades(tx_ids)
 ```
 
 ##### Open Positions
@@ -204,21 +204,21 @@ trades = kraken.query_trades(tx_ids)
 **Input:** Comma delimited list of transaction (tx) ids
 
 ```ruby
-positions = kraken.open_positions(tx_ids)
+positions = client.private.open_positions(tx_ids)
 ```
 
 ##### Ledgers Info
 
 ```ruby
-ledgers = kraken.ledgers_info
+ledgers = client.private.ledgers_info
 ```
 
-##### Ledgers Info
+##### Query Ledgers
 
 **Input:** Comma delimited list of ledger ids
 
 ```ruby
-ledgers = kraken.query_ledgers(ledger_ids)
+ledgers = client.private.query_ledgers(ledger_ids)
 ```
 
 ##### Trade Volume
@@ -227,7 +227,7 @@ ledgers = kraken.query_ledgers(ledger_ids)
 
 ```ruby
 asset_pairs = 'XLTCXXDG, ZEURXXDG'
-volume = kraken.query_ledgers(asset_pairs)
+volume = client.private.query_ledgers(asset_pairs)
 ```
 
 ##### Add Order
@@ -243,13 +243,13 @@ opts = {
   volume: 0.01
 }
 
-kraken.add_order(opts)
+client.private.add_order(opts)
 ```
 
 ##### Cancel Order
 
 ```ruby
-kraken.cancel_order("UKIYSP-9VN27-AJWWYC")
+client.private.cancel_order("UKIYSP-9VN27-AJWWYC")
 ```
 
 

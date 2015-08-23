@@ -1,48 +1,34 @@
-require 'spec_helper'
+require_relative File.join '..', '..', 'lib', 'kraken_client'
+require 'spectus'
 
-describe KrakenClient::Endpoints::Public do
+# Testing Public Endpoints
+kraken = KrakenClient.load
+client = kraken.public
 
-  before :each do
-    sleep 0.3 # to prevent rapidly pinging the Kraken server
-  end
+# Testing time
+kraken_time = DateTime.parse(client.server_time.rfc1123)
+utc_time = Time.now.getutc
+Spectus.this { kraken_time.day }.MUST Equal: utc_time.day
+Spectus.this { kraken_time.hour }.MUST Equal: utc_time.hour
 
-  let(:kraken) { KrakenClient.load }
-  let(:client) { kraken.public }
+# Assets
+Spectus.this { client.assets.XETH.aclass }.MUST Eql: 'currency'
 
-  it "gets the proper server time" do
-    kraken_time = DateTime.parse(client.server_time.rfc1123)
-    utc_time = Time.now.getutc
-    expect(kraken_time.day).to eq utc_time.day
-    expect(kraken_time.hour).to eq utc_time.hour
-  end
+# Assets Pairs
+Spectus.this { client.asset_pairs.XETHXXBT.altname }.MUST Eql: 'ETHXBT'
 
-  it "gets list of tradeable assets" do
-    expect(client.assets).to respond_to :XXBT
-  end
+# Ticker
+result = client.ticker(pair: 'XXBTZEUR, XXBTZGBP')
+Spectus.this { result.XXBTZGBP.a.class }.MUST Equal: Array
 
-  it "gets list of asset pairs" do
-    expect(client.asset_pairs).to respond_to :XXBTZEUR
-  end
+# Order Book
+order_book = client.order_book(pair: 'XXBTZEUR')
+Spectus.this { order_book.XXBTZEUR.asks.class }.MUST Equal: Array
 
-  it "gets public ticker data for given asset pairs" do
-    result = client.ticker(pair: 'XXBTZEUR, XXBTZGBP')
-    expect(result).to respond_to :XXBTZEUR
-    expect(result).to respond_to :XXBTZGBP
-  end
+# Trades
+trades = client.trades(pair: 'XXBTZEUR')
+Spectus.this { trades.XXBTZEUR.class }.MUST Equal: Array
 
-  it "gets order book data for a given asset pair" do
-    order_book = client.order_book(pair: 'XXBTZEUR')
-    expect(order_book.XXBTZEUR).to respond_to :asks
-  end
-
-  it "gets an array of trades data for a given asset pair" do
-    trades = client.trades(pair: 'XXBTZEUR')
-    expect(trades.XXBTZEUR).to be_instance_of(Array)
-  end
-
-  it "gets an array of spread data for a given asset pair" do
-    spread = client.spread(pair: 'XXBTZEUR')
-    expect(spread.XXBTZEUR).to be_instance_of(Array)
-  end
-
-end
+# Spread
+spread = client.spread(pair: 'XXBTZEUR')
+Spectus.this { spread.XXBTZEUR.class }.MUST Equal: Array
