@@ -1,14 +1,49 @@
-# **KrakenClient**
+# KrakenClient
+
 [![Gem Version](https://badge.fury.io/rb/kraken_client.svg)](http://badge.fury.io/rb/kraken_client)
 [![Code Climate](https://codeclimate.com/github/shideneyu/kraken_client/badges/gpa.svg)](https://codeclimate.com/github/shideneyu/kraken_client)
 [![Test Coverage](https://codeclimate.com/github/shideneyu/kraken_client/badges/coverage.svg)](https://codeclimate.com/github/shideneyu/kraken_client/coverage)
 [![Build Status](https://travis-ci.org/shideneyu/kraken_client.svg?branch=master)](https://travis-ci.org/shideneyu/kraken_client)
 
-`KrakenClient` is a **Ruby** wrapper of the Kraken API. Kraken is a market exchange site serving those trading with Crypto-Currencies, such as **Bitcoin**.
+![kraken_client_blob](http://image.noelshack.com/fichiers/2015/34/1440350422-kraken3.png)
 
-This gem tends to be a replacement for [kraken_ruby](https://github.com/leishman/kraken_ruby), another wrapper, from which it is originally forked from.
+__KrakenClient__ is a Ruby wrapper of the [Kraken API](https://support.kraken.com/hc/en-us/articles/206548367-What-is-the-API-call-rate-limit-). 
+[Kraken](https://www.kraken.com/) is a market exchange site serving those trading with Crypto-Currencies, such as **Bitcoin**.
 
-It has every features of the latter gem, with improved readability, usability, maintenability, and speced using the Awesome [Spectus gem](https://github.com/fixrb/spectus).
+It is a robust gem, and tested using the Awesome [Spectus gem](https://github.com/fixrb/spectus).
+
+## Summary
+
+* [Installation](#installation)
+* [Usage](#usage)
+  * [Configuration](#configuration)
+    * [Call Rate Limiter](#call-rate-limiter)
+    * [Requests](#requests)
+    * [Public Endpoints](#public-endpoints)
+        * [Asset Info](#asset-info)
+        * [Asset Pairs](#asset-pairs)
+        * [Ticker Information](#ticker-information)
+        * [Order Book](#order-book)
+        * [Trades](#trades)
+        * [Spread](#spread)
+    * [Private Endpoints](#private-endpoints)
+        * [Balance](#balance)
+        * [Trade Balance](#trade-balance)
+        * [Open Orders](#open-orders)
+        * [Closed Orders](#closed-orders)
+        * [Query Orders](#query-orders)
+        * [Trades History](#trades-history)
+        * [Query Trades](#query-trades)
+        * [Open Positions](#open-positions)
+        * [Ledgers Info](#ledgers-info)
+        * [Query Ledgers](#query-ledgers)
+        * [Trade Volume](#trade-volume)
+        * [Add Order](#add-order)
+        * [Cancel Order](#cancel-order)
+* [Donations](#donations)
+* [Credits](#credits)
+* [Contributing](#contributing)
+* [License](#license)
 
 
 ## Installation
@@ -25,7 +60,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install kraken_ruby
+    $ gem install kraken_client
 
 And require it in your application:
 
@@ -260,12 +295,20 @@ client.private.add_order(opts)
 client.private.cancel_order("UKIYSP-9VN27-AJWWYC")
 ```
 
+## Donations
+
+If you like the work that has been done, do not hesitate in paying me a Coffee, I'd gladly accept it :) I accept Bitcoins.
+![bitcoinadress](http://image.noelshack.com/fichiers/2015/34/1440342556-bitcoinadress.png)
+
+Bitcoin Adress: 1LxffuH2C44mFNTYe1NtDz7FeWScCFZqM8
+Donate here: https://www.coinbase.com/shideneyu
 
 ## Credits
 
 This gem has been made by [Sidney SISSAOUI (shideneyu)](https://github.com/shideneyu). 
 
-Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other  [kraken_ruby](https://github.com/leishman/kraken_ruby)  contributors for their gem, which helped me to have a nice base to begin **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
+Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other [kraken_ruby](https://github.com/leishman/kraken_ruby/graphs/contributors)  contributors for their gem, which helped me to have a nice skeleton to begin **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
+
 If you want to be part of those credits, do not hesitate to contribute by doing some pull requests ;) !
 
 
