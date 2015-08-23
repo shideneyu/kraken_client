@@ -8,7 +8,7 @@ module KrakenClient
         hash[:result]
       end
 
-      def endpoint_names
+      def data
         {
           :Time       => :server_time,
           :AssetPairs => :asset_pairs,
