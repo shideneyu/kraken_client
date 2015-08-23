@@ -58,7 +58,7 @@ module KrakenClient
         @counter ||= case config.tier
           when 0 then 10
           when 1 then 10
-          when 2 then 15
+          when 2 then 10
           when 3 then 20
           when 4 then 20
         end

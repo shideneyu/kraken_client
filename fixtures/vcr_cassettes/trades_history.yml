@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kraken.com/0/private/TradesHistory
+    body:
+      encoding: UTF-8
+      string: nonce=943910819948949525
+    headers:
+      Api-Key:
+      - COMPUTED
+      Api-Sign:
+      - COMPUTED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 23 Aug 2015 01:33:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
+        01:33:29 GMT; path=/; domain=.kraken.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - COMPUTED
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"trades":{"TGGPX6-6RB25-OBRPHS":{"ordertxid":"O475ZL-YESKC-XPWMHB","pair":"XETHZEUR","time":1440193797.3785,"type":"sell","ordertype":"limit","price":"1.30349","cost":"1226.95680","fee":"1.96313","vol":"941.28593402","margin":"0.00000","misc":""},"TKCPEI-IOJ3V-OWYLD6":{"ordertxid":"OFFEW7-XBSCD-QM2I6R","pair":"XETHZEUR","time":1440189051.7106,"type":"sell","ordertype":"limit","price":"1.27000","cost":"10.35031","fee":"0.01656","vol":"8.14984964","margin":"0.00000","misc":""},"TXMKZY-UJRDU-UXA3RQ":{"ordertxid":"OFFEW7-XBSCD-QM2I6R","pair":"XETHZEUR","time":1440189045.0212,"type":"sell","ordertype":"limit","price":"1.27000","cost":"20.69172","fee":"0.03311","vol":"16.29269422","margin":"0.00000","misc":""},"TUQDI7-2A2VX-4J3J6P":{"ordertxid":"O4IZWP-FBLE5-VGGBR2","pair":"XETHZEUR","time":1440188566.3866,"type":"sell","ordertype":"limit","price":"1.27000","cost":"36.69924","fee":"0.05872","vol":"28.89704241","margin":"0.00000","misc":""},"TDKDI7-GLJU6-AXPDJI":{"ordertxid":"O4IZWP-FBLE5-VGGBR2","pair":"XETHZEUR","time":1440188551.6007,"type":"sell","ordertype":"limit","price":"1.27000","cost":"8.41248","fee":"0.01346","vol":"6.62400000","margin":"0.00000","misc":""},"T76GH4-6WSNO-BR5C6F":{"ordertxid":"O4IZWP-FBLE5-VGGBR2","pair":"XETHZEUR","time":1440188544.5184,"type":"sell","ordertype":"limit","price":"1.28341","cost":"0.00110","fee":"0.00001","vol":"0.00085723","margin":"0.00000","misc":""},"T6BPBS-CKEOT-5RV3IV":{"ordertxid":"OYKIQR-L3VX6-PXX3QP","pair":"XETHZEUR","time":1440184482.1885,"type":"buy","ordertype":"limit","price":"1.25001","cost":"599.48719","fee":"0.95918","vol":"479.58591739","margin":"0.00000","misc":""},"T6ZXO4-PRCTQ-NKWANC":{"ordertxid":"OYKIQR-L3VX6-PXX3QP","pair":"XETHZEUR","time":1440184480.8866,"type":"buy","ordertype":"limit","price":"1.25001","cost":"33.13289","fee":"0.05301","vol":"26.50610000","margin":"0.00000","misc":""},"TJOUGD-NBNFP-FW32TP":{"ordertxid":"OYKIQR-L3VX6-PXX3QP","pair":"XETHZEUR","time":1440184480.7564,"type":"buy","ordertype":"limit","price":"1.25001","cost":"74.82260","fee":"0.11972","vol":"59.85760000","margin":"0.00000","misc":""},"T7YOUA-GQYLL-3SCZYP":{"ordertxid":"OYKIQR-L3VX6-PXX3QP","pair":"XETHZEUR","time":1440184475.844,"type":"buy","ordertype":"limit","price":"1.25001","cost":"54.10118","fee":"0.08656","vol":"43.28060000","margin":"0.00000","misc":""},"TEOPQ4-JYRII-A25DM2":{"ordertxid":"OYKIQR-L3VX6-PXX3QP","pair":"XETHZEUR","time":1440184474.7365,"type":"buy","ordertype":"limit","price":"1.25001","cost":"500.00400","fee":"0.80001","vol":"400.00000000","margin":"0.00000","misc":""},"T43EFN-LF4HZ-6MIW5U":{"ordertxid":"OYKIQR-L3VX6-PXX3QP","pair":"XETHZEUR","time":1440184465.6373,"type":"buy","ordertype":"limit","price":"1.25001","cost":"56.46670","fee":"0.09035","vol":"45.17299861","margin":"0.00000","misc":""},"TUIXMX-M7YTO-PIPMZA":{"ordertxid":"OYKIQR-L3VX6-PXX3QP","pair":"XETHZEUR","time":1440184462.7562,"type":"buy","ordertype":"limit","price":"1.25001","cost":"33.02374","fee":"0.05284","vol":"26.41878400","margin":"0.00000","misc":""},"TFHB5G-ORDPC-D5N4XY":{"ordertxid":"OYKIQR-L3VX6-PXX3QP","pair":"XETHZEUR","time":1440184461.7489,"type":"buy","ordertype":"limit","price":"1.25001","cost":"23.97269","fee":"0.03836","vol":"19.17800000","margin":"0.00000","misc":""},"TWYBFW-2M6VA-XEWWTK":{"ordertxid":"OTROMJ-BVPA3-ROGNZX","pair":"XETHZEUR","time":1440178999.414,"type":"buy","ordertype":"limit","price":"1.36000","cost":"0.36000","fee":"0.00058","vol":"0.26470589","margin":"0.00000","misc":""},"TC4KV7-BEUVG-QMCRXY":{"ordertxid":"OTROMJ-BVPA3-ROGNZX","pair":"XETHZEUR","time":1440178997.8852,"type":"buy","ordertype":"limit","price":"1.36000","cost":"1.00000","fee":"0.00160","vol":"0.73529411","margin":"0.00000","misc":""},"TPCDMG-ZYQYH-N4VHJG":{"ordertxid":"OMOPDQ-PMPBS-WEB44W","pair":"XXBTZEUR","time":1440152868.483,"type":"sell","ordertype":"limit","price":"210.20000","cost":"105.10000","fee":"0.16816","vol":"0.50000000","margin":"0.00000","misc":""},"TEY2ZW-LAGP3-PFFTVY":{"ordertxid":"OUJ4V4-HB25J-2PEX3A","pair":"XXBTZEUR","time":1440152630.3106,"type":"buy","ordertype":"limit","price":"209.86010","cost":"104.93005","fee":"0.16789","vol":"0.50000000","margin":"0.00000","misc":""},"TVCJ3B-3UVTL-2UWBVD":{"ordertxid":"OSOSHM-BOCYR-JJJENN","pair":"XETHZEUR","time":1440109173.7417,"type":"sell","ordertype":"market","price":"1.34042","cost":"1.59510","fee":"0.00415","vol":"1.19000000","margin":"0.00000","misc":""},"TFNLDH-4ABVJ-EOCGYZ":{"ordertxid":"O3FLSW-FMU5J-QILSVQ","pair":"XETHZEUR","time":1440096631.2024,"type":"buy","ordertype":"limit","price":"1.29989","cost":"1.54700","fee":"0.00402","vol":"1.19010000","margin":"0.00000","misc":""},"TJS2DT-S5GDF-746XS4":{"ordertxid":"O23UDQ-A73M5-BNZO4C","pair":"XETHZEUR","time":1440089663.9165,"type":"sell","ordertype":"limit","price":"1.22000","cost":"86.62000","fee":"0.13859","vol":"71.00000000","margin":"0.00000","misc":""},"TLZ5PB-MFBNT-LP7TDA":{"ordertxid":"OTDBFW-XEM3Q-S7XEJ6","pair":"XETHZEUR","time":1440088940.1339,"type":"sell","ordertype":"limit","price":"1.20000","cost":"24.00000","fee":"0.03840","vol":"20.00000000","margin":"0.00000","misc":""},"T6ZXLI-Z72TZ-BT5L24":{"ordertxid":"OOG4LN-WKYLK-K427GM","pair":"XETHZEUR","time":1440086465.0835,"type":"buy","ordertype":"limit","price":"1.16000","cost":"17.96049","fee":"0.02874","vol":"15.48318355","margin":"0.00000","misc":""},"TZQIMV-HBY7M-LYKNVU":{"ordertxid":"OOG4LN-WKYLK-K427GM","pair":"XETHZEUR","time":1440086255.6621,"type":"buy","ordertype":"limit","price":"1.16000","cost":"41.98771","fee":"0.06718","vol":"36.19630000","margin":"0.00000","misc":""},"TPVA2G-LYFJ3-4YFXMK":{"ordertxid":"OOG4LN-WKYLK-K427GM","pair":"XETHZEUR","time":1440086175.5005,"type":"buy","ordertype":"limit","price":"1.16000","cost":"34.01180","fee":"0.05442","vol":"29.32051645","margin":"0.00000","misc":""},"TNDTMF-2CJ74-GU3CRD":{"ordertxid":"OF25G6-RTPSE-EI4IZB","pair":"XETHZEUR","time":1440085418.2478,"type":"buy","ordertype":"limit","price":"1.15010","cost":"11.50100","fee":"0.01840","vol":"10.00000000","margin":"0.00000","misc":""},"TCSPYS-24HHP-EYJJH5":{"ordertxid":"ODSETW-TIS4S-QB2PNZ","pair":"XETHZEUR","time":1440080173.2833,"type":"sell","ordertype":"limit","price":"1.33000","cost":"106.12336","fee":"0.16980","vol":"79.79200000","margin":"0.00000","misc":""},"T6Y7M3-ZD76B-CHL75P":{"ordertxid":"OOEKSW-OY7Y6-LTEQVK","pair":"XETHZEUR","time":1440072661.2467,"type":"buy","ordertype":"limit","price":"1.25000","cost":"100.00000","fee":"0.26000","vol":"80.00000000","margin":"0.00000","misc":""}},"count":"28"}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 01:33:30 GMT
+recorded_with: VCR 2.9.3

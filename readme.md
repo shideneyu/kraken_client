@@ -36,13 +36,13 @@ And require it in your application:
 You can pass multiple variables that will be used in the gem.
 
 ```ruby
-KrakenClient.configure do
-      @api_key     = ENV['KRAKEN_API_KEY']
-      @api_secret  = ENV['KRAKEN_API_SECRET']
-      @base_uri    = 'https://api.kraken.com'
-      @api_version = 0
-      @limiter     = true
-      @tier        = 2
+KrakenClient.configure do |config|
+      config.api_key     = ENV['KRAKEN_API_KEY']
+      config.api_secret  = ENV['KRAKEN_API_SECRET']
+      config.base_uri    = 'https://api.kraken.com'
+      config.api_version = 0
+      config.limiter     = true
+      config.tier        = 2
 end
 ```
 

@@ -1,18 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.kraken.com/0/public/Time
+    method: post
+    uri: https://api.kraken.com/0/private/TradeBalance
     body:
-      encoding: US-ASCII
-      string: ''
+      encoding: UTF-8
+      string: nonce=943910732080478634
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      Api-Key:
+      - COMPUTED
+      Api-Sign:
+      - COMPUTED
   response:
     status:
       code: 200
@@ -21,7 +19,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Sun, 23 Aug 2015 00:49:31 GMT
+      - Sun, 23 Aug 2015 01:31:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -30,15 +28,14 @@ http_interactions:
       - keep-alive
       Set-Cookie:
       - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
-        00:49:30 GMT; path=/; domain=.kraken.com; HttpOnly
+        01:31:15 GMT; path=/; domain=.kraken.com; HttpOnly
       Vary:
       - Accept-Encoding
       Cf-Ray:
       - COMPUTED
     body:
       encoding: UTF-8
-      string: '{"error":[],"result":{"unixtime":1440290972,"rfc1123":"Sun, 23 Aug
-        15 00:49:32 +0000"}}'
+      string: '{"error":[],"result":{"eb":"1760.4900","tb":"1616.3866","m":"0.0000","n":"0.0000","c":"0.0000","v":"0.0000","e":"1616.3866","mf":"1616.3866"}}'
     http_version: 
-  recorded_at: Sun, 23 Aug 2015 00:49:30 GMT
+  recorded_at: Sun, 23 Aug 2015 01:31:15 GMT
 recorded_with: VCR 2.9.3
