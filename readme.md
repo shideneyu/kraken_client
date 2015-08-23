@@ -301,7 +301,7 @@ If you like the work that has been done, do not hesitate in paying me a Coffee, 
 
 ![bitcoinadress](http://image.noelshack.com/fichiers/2015/34/1440342556-bitcoinadress.png)
 
-Bitcoin Adress: 1LxffuH2C44mFNTYe1NtDz7FeWScCFZqM8
+Bitcoin Adress: 1H1iMjfEKS7UyC9skaP1D5t47XwE12mndU
 Donate here: https://www.coinbase.com/shideneyu
 
 ## Credits
