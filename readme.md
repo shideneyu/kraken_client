@@ -77,13 +77,17 @@ KrakenClient.load({tier: 3}).config.tier
 
 For more information, please consult the [Kraken official documentation](https://support.kraken.com/hc/en-us/articles/206548367-What-is-the-API-call-rate-limit-).
 
-### Examples ###
+### Requests ###
 
 In all our examples henceforward, we consider this variable to be a loaded instance of `KrakenClient`
 
 ```ruby
 client = KrakenClient.load
 ```
+
+If you ever need to see the full documentation for the possible parameters, please take a look at the official [Kraken API docs](https://www.kraken.com/help/api).
+
+A `KrakenClient::MissingParameter` exception will be raised along with the missing parameters if a required parameter is not passed.
 
 ### *Public Endpoints* ###
 
@@ -177,10 +181,12 @@ closed_orders = client.private.closed_orders
 
 ##### Query Orders
 
+**Input:** Comma delimited list of transaction ids (txid)
+
 See all orders
 
 ```ruby
-orders = client.private.query_orders
+orders = client.private.query_orders(txid: ids)
 ```
 
 ##### Trades History
@@ -193,24 +199,26 @@ trades = client.private.trade_history
 
 ##### Query Trades
 
-**Input:** Comma delimited list of transaction (tx) ids
+**Input:** Comma delimited list of transaction ids (txid)
+
+See all orders
 
 ```ruby
-trades = client.private.query_trades(tx_ids)
+orders = client.private.query_orders(txid: ids)
 ```
 
 ##### Open Positions
 
-**Input:** Comma delimited list of transaction (tx) ids
+**Input:** Comma delimited list of transaction (txid) ids
 
 ```ruby
-positions = client.private.open_positions(tx_ids)
+positions = client.private.open_positions(txid)
 ```
 
 ##### Ledgers Info
 
 ```ruby
-ledgers = client.private.ledgers_info
+ledgers = client.private.ledgers
 ```
 
 ##### Query Ledgers
@@ -218,16 +226,13 @@ ledgers = client.private.ledgers_info
 **Input:** Comma delimited list of ledger ids
 
 ```ruby
-ledgers = client.private.query_ledgers(ledger_ids)
+ledgers = client.private.query_ledgers(id: ledger_ids)
 ```
 
 ##### Trade Volume
 
-**Input:** Comma delimited list of asset pairs
-
 ```ruby
-asset_pairs = 'XLTCXXDG, ZEURXXDG'
-volume = client.private.query_ledgers(asset_pairs)
+ledgers = client.private.trade_volume
 ```
 
 ##### Add Order
