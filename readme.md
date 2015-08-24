@@ -299,9 +299,9 @@ client.private.cancel_order("UKIYSP-9VN27-AJWWYC")
 
 If you like the work that has been done, do not hesitate in paying me a Coffee, I'd gladly accept it :)
 
-![bitcoinadress](http://image.noelshack.com/fichiers/2015/34/1440342556-bitcoinadress.png)
+![bitcoinadress](http://image.noelshack.com/fichiers/2015/35/1440407022-lastbtc.png)
 
-Bitcoin Adress: 1H1iMjfEKS7UyC9skaP1D5t47XwE12mndU
+Bitcoin Adress: 1LxffuH2C44mFNTYe1NtDz7FeWScCFZqM8
 Donate here: https://www.coinbase.com/shideneyu
 
 ## Credits
