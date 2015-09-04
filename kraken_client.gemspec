@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['shideneyu@gmail.com']
   spec.description   = %q{'Wrapper for Kraken Exchange API'}
   spec.summary       = %q{'Wrapper for Kraken Exchange API'}
-  spec.homepage      = 'https://www.kraken.com/help/api'
+  spec.homepage      = 'https://github.com/shideneyu/kraken_client'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/).delete_if { |f| f =~ /\.gem$/ }
