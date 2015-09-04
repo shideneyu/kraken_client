@@ -51,7 +51,7 @@ module KrakenClient
           when 'AddOrder'      then 0
           when 'CancelOrder'   then 0
           else                      1
-        end          
+        end
       end
 
       def counter_total
