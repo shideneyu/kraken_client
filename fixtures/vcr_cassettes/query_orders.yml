@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kraken.com/0/private/QueryOrders
+    body:
+      encoding: UTF-8
+      string: nonce=943911143753050362&txid=OKRRJ6-MH3UH-DV6IKT
+    headers:
+      Api-Key:
+      - COMPUTED
+      Api-Sign:
+      - COMPUTED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 23 Aug 2015 01:41:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
+        01:41:44 GMT; path=/; domain=.kraken.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - COMPUTED
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"OKRRJ6-MH3UH-DV6IKT":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440236676.6356,"closetm":1440272720.3485,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.17008","price2":"0","leverage":"none","order":"buy
+        1200.00000000 ETHEUR @ limit 1.17008"},"vol":"1200.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"}}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 01:41:44 GMT
+recorded_with: VCR 2.9.3

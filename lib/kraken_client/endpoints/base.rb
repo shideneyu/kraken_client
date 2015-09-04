@@ -18,8 +18,10 @@ module KrakenClient
       private
 
       def set_methods
-        endpoint_names.each do |method, method_alias|
-           self.class.send(:define_method, method_alias) do |args = {}|
+        data.each do |method, method_alias|
+           self.class.send(:define_method, Array(method_alias).first) do |args = {}|
+            raise_exception(Array(method_alias).last, args)
+
             perform(method.to_s, args)
           end
         end      
@@ -27,6 +29,14 @@ module KrakenClient
 
       def type
         @type ||= self.class.name.demodulize
+      end
+
+      def data
+        fail ::KrakenClient::NotImplemented
+      end
+
+      def raise_exception
+        fail ::KrakenClient::NotImplemented
       end
     end
   end

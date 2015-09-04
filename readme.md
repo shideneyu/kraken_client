@@ -1,11 +1,49 @@
+# KrakenClient
 
-# **KrakenClient**
+[![Gem Version](https://badge.fury.io/rb/kraken_client.svg)](http://badge.fury.io/rb/kraken_client)
+[![Code Climate](https://codeclimate.com/github/shideneyu/kraken_client/badges/gpa.svg)](https://codeclimate.com/github/shideneyu/kraken_client)
+[![Test Coverage](https://codeclimate.com/github/shideneyu/kraken_client/badges/coverage.svg)](https://codeclimate.com/github/shideneyu/kraken_client/coverage)
+[![Build Status](https://travis-ci.org/shideneyu/kraken_client.svg?branch=master)](https://travis-ci.org/shideneyu/kraken_client)
 
-`KrakenClient` is a **Ruby** wrapper of the Kraken API. Kraken is a market exchange site serving those trading with Crypto-Currencies, such as **Bitcoin**.
+![kraken_client_blob](http://image.noelshack.com/fichiers/2015/34/1440350422-kraken3.png)
 
-This gem tends to be a replacement for [kraken_ruby](https://github.com/leishman/kraken_ruby), another wrapper, from which it is originally forked from.
+__KrakenClient__ is a Ruby wrapper of the [Kraken API](https://support.kraken.com/hc/en-us/articles/206548367-What-is-the-API-call-rate-limit-). 
+[Kraken](https://www.kraken.com/) is a market exchange site serving those trading with Crypto-Currencies, such as **Bitcoin**.
 
-It has every features of the latter gem, with improved readability, usability, maintenability, and fully speced.
+It is a robust gem, and tested using the Awesome [Spectus gem](https://github.com/fixrb/spectus).
+
+## Summary
+
+* [Installation](#installation)
+* [Usage](#usage)
+  * [Configuration](#configuration)
+    * [Call Rate Limiter](#call-rate-limiter)
+    * [Requests](#requests)
+    * [Public Endpoints](#public-endpoints)
+        * [Asset Info](#asset-info)
+        * [Asset Pairs](#asset-pairs)
+        * [Ticker Information](#ticker-information)
+        * [Order Book](#order-book)
+        * [Trades](#trades)
+        * [Spread](#spread)
+    * [Private Endpoints](#private-endpoints)
+        * [Balance](#balance)
+        * [Trade Balance](#trade-balance)
+        * [Open Orders](#open-orders)
+        * [Closed Orders](#closed-orders)
+        * [Query Orders](#query-orders)
+        * [Trades History](#trades-history)
+        * [Query Trades](#query-trades)
+        * [Open Positions](#open-positions)
+        * [Ledgers Info](#ledgers-info)
+        * [Query Ledgers](#query-ledgers)
+        * [Trade Volume](#trade-volume)
+        * [Add Order](#add-order)
+        * [Cancel Order](#cancel-order)
+* [Donations](#donations)
+* [Credits](#credits)
+* [Contributing](#contributing)
+* [License](#license)
 
 
 ## Installation
@@ -22,7 +60,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install kraken_ruby
+    $ gem install kraken_client
 
 And require it in your application:
 
@@ -36,13 +74,13 @@ And require it in your application:
 You can pass multiple variables that will be used in the gem.
 
 ```ruby
-KrakenClient.configure do
-      @api_key     = ENV['KRAKEN_API_KEY']
-      @api_secret  = ENV['KRAKEN_API_SECRET']
-      @base_uri    = 'https://api.kraken.com'
-      @api_version = 0
-      @limiter     = true
-      @tier        = 2
+KrakenClient.configure do |config|
+      config.api_key     = ENV['KRAKEN_API_KEY']
+      config.api_secret  = ENV['KRAKEN_API_SECRET']
+      config.base_uri    = 'https://api.kraken.com'
+      config.api_version = 0
+      config.limiter     = true
+      config.tier        = 2
 end
 ```
 
@@ -77,7 +115,7 @@ KrakenClient.load({tier: 3}).config.tier
 
 For more information, please consult the [Kraken official documentation](https://support.kraken.com/hc/en-us/articles/206548367-What-is-the-API-call-rate-limit-).
 
-### Examples ###
+### Requests ###
 
 In all our examples henceforward, we consider this variable to be a loaded instance of `KrakenClient`
 
@@ -85,7 +123,11 @@ In all our examples henceforward, we consider this variable to be a loaded insta
 client = KrakenClient.load
 ```
 
-### *Public Endpoints* ###
+If you ever need to see the full documentation for the possible parameters, please take a look at the official [Kraken API docs](https://www.kraken.com/help/api).
+
+A `KrakenClient::MissingParameter` exception will be raised along with the missing parameters if a required parameter is not passed.
+
+### Public Endpoints ###
 
 
 ##### Server Time
@@ -152,7 +194,7 @@ Get account balance for each asset
 Note: Rates used for the floating valuation is the midpoint of the best bid and ask prices
 
 ```ruby
-balance = kraken.balance
+balance = client.private.balance
 ```
 
 ##### Trade Balance
@@ -160,27 +202,29 @@ balance = kraken.balance
 Get account trade balance
 
 ```ruby
-trade_balance = kraken.trade_balance
+trade_balance = client.private.trade_balance
 ```
 
 ##### Open Orders
 
 ```ruby
-open_orders = kraken.open_orders
+open_orders = client.private.open_orders
 ```
 
 ##### Closed Orders
 
 ```ruby
-closed_orders = kraken.closed_orders
+closed_orders = client.private.closed_orders
 ```
 
 ##### Query Orders
 
+**Input:** Comma delimited list of transaction ids (txid)
+
 See all orders
 
 ```ruby
-orders = kraken.query_orders
+orders = client.private.query_orders(txid: ids)
 ```
 
 ##### Trades History
@@ -188,46 +232,45 @@ orders = kraken.query_orders
 Get array of all trades
 
 ```ruby
-trades = kraken.trade_history
+trades = client.private.trade_history
 ```
 
 ##### Query Trades
 
-**Input:** Comma delimited list of transaction (tx) ids
+**Input:** Comma delimited list of transaction ids (txid)
+
+See all orders
 
 ```ruby
-trades = kraken.query_trades(tx_ids)
+orders = client.private.query_orders(txid: ids)
 ```
 
 ##### Open Positions
 
-**Input:** Comma delimited list of transaction (tx) ids
+**Input:** Comma delimited list of transaction (txid) ids
 
 ```ruby
-positions = kraken.open_positions(tx_ids)
+positions = client.private.open_positions(txid)
 ```
 
 ##### Ledgers Info
 
 ```ruby
-ledgers = kraken.ledgers_info
+ledgers = client.private.ledgers
 ```
 
-##### Ledgers Info
+##### Query Ledgers
 
 **Input:** Comma delimited list of ledger ids
 
 ```ruby
-ledgers = kraken.query_ledgers(ledger_ids)
+ledgers = client.private.query_ledgers(id: ledger_ids)
 ```
 
 ##### Trade Volume
 
-**Input:** Comma delimited list of asset pairs
-
 ```ruby
-asset_pairs = 'XLTCXXDG, ZEURXXDG'
-volume = kraken.query_ledgers(asset_pairs)
+ledgers = client.private.trade_volume
 ```
 
 ##### Add Order
@@ -243,21 +286,30 @@ opts = {
   volume: 0.01
 }
 
-kraken.add_order(opts)
+client.private.add_order(opts)
 ```
 
 ##### Cancel Order
 
 ```ruby
-kraken.cancel_order("UKIYSP-9VN27-AJWWYC")
+client.private.cancel_order("UKIYSP-9VN27-AJWWYC")
 ```
 
+## Donations
+
+If you like the work that has been done, do not hesitate in paying me a Coffee, I'd gladly accept it :)
+
+![bitcoinadress](http://image.noelshack.com/fichiers/2015/35/1440407022-lastbtc.png)
+
+Bitcoin Adress: 1LxffuH2C44mFNTYe1NtDz7FeWScCFZqM8
+Donate here: https://www.coinbase.com/shideneyu
 
 ## Credits
 
 This gem has been made by [Sidney SISSAOUI (shideneyu)](https://github.com/shideneyu). 
 
-Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other  [kraken_ruby](https://github.com/leishman/kraken_ruby)  contributors for their gem, which helped me to have a nice base to begin **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
+Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other [kraken_ruby](https://github.com/leishman/kraken_ruby/graphs/contributors)  contributors for their gem, which helped me to have a nice skeleton to begin **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
+
 If you want to be part of those credits, do not hesitate to contribute by doing some pull requests ;) !
 
 

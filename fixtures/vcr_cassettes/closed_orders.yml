@@ -1,0 +1,134 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kraken.com/0/private/ClosedOrders
+    body:
+      encoding: UTF-8
+      string: nonce=943910733106885628
+    headers:
+      Api-Key:
+      - COMPUTED
+      Api-Sign:
+      - COMPUTED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 23 Aug 2015 01:31:18 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
+        01:31:17 GMT; path=/; domain=.kraken.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - COMPUTED
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"closed":{"O75MLD-64OIU-5O4JDM":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440289877.8097,"closetm":1440291917.7096,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.19980","price2":"0","leverage":"none","order":"buy
+        1100.00000000 ETHEUR @ limit 1.19980"},"vol":"1100.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OTVCNA-KKVID-3QQA54":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440253932.701,"closetm":1440253971.5454,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.29999","price2":"0","leverage":"none","order":"sell
+        99.74972000 ETHEUR @ limit 1.29999"},"vol":"99.74972000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OKRRJ6-MH3UH-DV6IKT":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440236676.6356,"closetm":1440272720.3485,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.17008","price2":"0","leverage":"none","order":"buy
+        1200.00000000 ETHEUR @ limit 1.17008"},"vol":"1200.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OVNOLT-BTKRZ-6IZV3G":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440236479.196,"closetm":1440236654.8024,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.16008","price2":"0","leverage":"none","order":"buy
+        1200.00000000 ETHEUR @ limit 1.16008"},"vol":"1200.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OWECQR-BED3E-5YYFYU":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440235802.4145,"closetm":1440236454.6985,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.16000","price2":"0","leverage":"none","order":"buy
+        1235.00000000 ETHEUR @ limit 1.16000"},"vol":"1235.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OXJ55X-SDGFZ-3KJPKR":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440198082.8294,"closetm":1440253916.345,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.30345","price2":"0","leverage":"none","order":"sell
+        99.74972000 ETHEUR @ limit 1.30345"},"vol":"99.74972000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OV74TX-7I3EE-42SXKR":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440197672.8944,"closetm":1440198060.9667,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.30347","price2":"0","leverage":"none","order":"sell
+        99.74972000 ETHEUR @ limit 1.30347"},"vol":"99.74972000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"O475ZL-YESKC-XPWMHB":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440193565.3114,"closetm":1440197655.5567,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.30349","price2":"0","leverage":"none","order":"sell
+        1041.03565000 ETHEUR @ limit 1.30349"},"vol":"1041.03565000","vol_exec":"941.28593402","cost":"1226.95680","fee":"1.96313","price":"1.30349","misc":"partial","oflags":"fciq"},"O42SYU-DUTEY-TVAMF7":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440192077.4401,"closetm":1440193546.5893,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.30900","price2":"0","leverage":"none","order":"sell
+        1041.03565000 ETHEUR @ limit 1.30900"},"vol":"1041.03565000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OI7AE4-AQ5YG-M5AMIQ":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440191789.4299,"closetm":1440192038.4607,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.30000","price2":"0","leverage":"none","order":"sell
+        1041.03565000 ETHEUR @ limit 1.30000"},"vol":"1041.03565000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"ODLJR7-7YJZE-F4E6V5":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440189110.9433,"closetm":1440190678.9161,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.29000","price2":"0","leverage":"none","order":"sell
+        1041.00000000 ETHEUR @ limit 1.29000"},"vol":"1041.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OFFEW7-XBSCD-QM2I6R":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440189042.4348,"closetm":1440189063.6435,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.27000","price2":"0","leverage":"none","order":"sell
+        65.47820000 ETHEUR @ limit 1.27000"},"vol":"65.47820000","vol_exec":"24.44254386","cost":"31.04203","fee":"0.04967","price":"1.27000","misc":"partial","oflags":"fciq"},"O4IZWP-FBLE5-VGGBR2":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440188544.5061,"closetm":1440188840.9365,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.27000","price2":"0","leverage":"none","order":"sell
+        1101.00010000 ETHEUR @ limit 1.27000"},"vol":"1101.00010000","vol_exec":"35.52189964","cost":"45.11282","fee":"0.07219","price":"1.27000","misc":"partial","oflags":"fciq"},"ORRAW6-2FA6A-MEEFIQ":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440187180.611,"closetm":1440187216.6723,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.26000","price2":"0","leverage":"none","order":"sell
+        500.00000000 ETHEUR @ limit 1.26000"},"vol":"500.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OGOPHK-HL7MX-44MDHI":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440185604.0352,"closetm":1440185648.2069,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.26000","price2":"0","leverage":"none","order":"sell
+        1101.00000000 ETHEUR @ limit 1.26000"},"vol":"1101.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OEBRON-76XQL-VUZUWQ":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440184616.3205,"closetm":1440184775.2722,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.28000","price2":"0","leverage":"none","order":"sell
+        1101.00000000 ETHEUR @ limit 1.28000"},"vol":"1101.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OYKIQR-L3VX6-PXX3QP":{"refid":null,"userref":null,"status":"closed","reason":null,"opentm":1440184459.5038,"closetm":1440184482.1895,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.25001","price2":"0","leverage":"none","order":"buy
+        1100.00000000 ETHEUR @ limit 1.25001"},"vol":"1100.00000000","vol_exec":"1100.00000000","cost":"1375.01099","fee":"2.20003","price":"1.25001","misc":"","oflags":"fciq"},"OYZBCZ-ZURQ7-UUTIJI":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440179040.2669,"closetm":1440184582.221,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.37000","price2":"0","leverage":"none","order":"sell
+        1.00010000 ETHEUR @ limit 1.37000"},"vol":"1.00010000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OTROMJ-BVPA3-ROGNZX":{"refid":null,"userref":null,"status":"closed","reason":null,"opentm":1440178997.8463,"closetm":1440178999.415,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.36000","price2":"0","leverage":"none","order":"buy
+        1.00000000 ETHEUR @ limit 1.36000"},"vol":"1.00000000","vol_exec":"1.00000000","cost":"1.36000","fee":"0.00218","price":"1.36000","misc":"","oflags":"fciq"},"OJDFC6-KGOGK-RZISHS":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440178931.7959,"closetm":1440178981.3242,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.32235","price2":"0","leverage":"none","order":"buy
+        29.00000000 ETHEUR @ limit 1.32235"},"vol":"29.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OFP6PR-KPXNF-QUMZKQ":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440170415.6066,"closetm":1440170538.0596,"starttm":0,"expiretm":0,"descr":{"pair":"XBTEUR","type":"buy","ordertype":"limit","price":"207.72000","price2":"0","leverage":"none","order":"buy
+        7.25000000 XBTEUR @ limit 207.72000"},"vol":"7.25000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"O45FVN-VKA6J-HZQVNR":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440170356.7501,"closetm":1440170412.3292,"starttm":0,"expiretm":0,"descr":{"pair":"XBTEUR","type":"buy","ordertype":"limit","price":"207.71359","price2":"0","leverage":"none","order":"buy
+        7.25000000 XBTEUR @ limit 207.71359"},"vol":"7.25000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OCT6VU-RUXSP-Z63566":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440170268.4635,"closetm":1440170311.259,"starttm":0,"expiretm":0,"descr":{"pair":"XBTEUR","type":"buy","ordertype":"limit","price":"207.49008","price2":"0","leverage":"none","order":"buy
+        7.20000000 XBTEUR @ limit 207.49008"},"vol":"7.20000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"O4E3NG-GXUT5-SJMGYE":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440170156.9639,"closetm":1440170246.6621,"starttm":0,"expiretm":0,"descr":{"pair":"XBTEUR","type":"buy","ordertype":"limit","price":"207.49005","price2":"0","leverage":"none","order":"buy
+        7.20000000 XBTEUR @ limit 207.49005"},"vol":"7.20000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"O5U5TZ-OLZP3-MM7TIS":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440170048.6696,"closetm":1440170111.7209,"starttm":0,"expiretm":0,"descr":{"pair":"XBTEUR","type":"buy","ordertype":"limit","price":"207.49000","price2":"0","leverage":"none","order":"buy
+        7.25000000 XBTEUR @ limit 207.49000"},"vol":"7.25000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OOR7HJ-JAHOZ-IZY6G7":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440156869.1734,"closetm":1440156922.4209,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.25438","price2":"0","leverage":"none","order":"buy
+        88.00000000 ETHEUR @ limit 1.25438"},"vol":"88.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OMOPDQ-PMPBS-WEB44W":{"refid":null,"userref":null,"status":"closed","reason":null,"opentm":1440152752.5752,"closetm":1440152868.4841,"starttm":0,"expiretm":0,"descr":{"pair":"XBTEUR","type":"sell","ordertype":"limit","price":"210.20000","price2":"0","leverage":"none","order":"sell
+        0.50000000 XBTEUR @ limit 210.20000"},"vol":"0.50000000","vol_exec":"0.50000000","cost":"105.10000","fee":"0.16816","price":"210.20000","misc":"","oflags":"fciq"},"OUJ4V4-HB25J-2PEX3A":{"refid":null,"userref":null,"status":"closed","reason":null,"opentm":1440152468.3807,"closetm":1440152630.3116,"starttm":0,"expiretm":0,"descr":{"pair":"XBTEUR","type":"buy","ordertype":"limit","price":"209.86010","price2":"0","leverage":"none","order":"buy
+        0.50000000 XBTEUR @ limit 209.86010"},"vol":"0.50000000","vol_exec":"0.50000000","cost":"104.93005","fee":"0.16789","price":"209.86010","misc":"","oflags":"fciq"},"OZYU5U-VSRJT-S7VZ5K":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440109253.7583,"closetm":1440152452.6002,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.13000","price2":"0","leverage":"none","order":"buy
+        98.00000000 ETHEUR @ limit 1.13000"},"vol":"98.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OSOSHM-BOCYR-JJJENN":{"refid":null,"userref":null,"status":"closed","reason":null,"opentm":1440109173.7359,"closetm":1440109173.7425,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"market","price":"0","price2":"0","leverage":"none","order":"sell
+        1.19000000 ETHEUR @ market"},"vol":"1.19000000","vol_exec":"1.19000000","cost":"1.59510","fee":"0.00415","price":"1.34042","misc":"","oflags":"fciq"},"O7BZJV-UHEDC-QFOZRW":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440097527.5299,"closetm":1440097633.8968,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.25000","price2":"0","leverage":"none","order":"buy
+        5.00000000 ETHEUR @ limit 1.25000"},"vol":"5.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OQX2PN-WZJTP-FN3ZTL":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440097134.8719,"closetm":1440097635.2118,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.19010","price2":"0","leverage":"none","order":"buy
+        23.00000000 ETHEUR @ limit 1.19010"},"vol":"23.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OTX446-KMVWD-7OPCZL":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440097074.212,"closetm":1440097111.2548,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.19010","price2":"0","leverage":"none","order":"buy
+        17.00000000 ETHEUR @ limit 1.19010"},"vol":"17.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OWDBJG-BFES5-SRVLXR":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440096844.4442,"closetm":1440097058.1809,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.19010","price2":"0","leverage":"none","order":"buy
+        19.00000000 ETHEUR @ limit 1.19010"},"vol":"19.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"O3FLSW-FMU5J-QILSVQ":{"refid":null,"userref":null,"status":"closed","reason":null,"opentm":1440096631.1824,"closetm":1440096631.2031,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"19.00000","price2":"0","leverage":"none","order":"buy
+        1.19010000 ETHEUR @ limit 19.00000"},"vol":"1.19010000","vol_exec":"1.19010000","cost":"1.54700","fee":"0.00402","price":"1.29989","misc":"","oflags":"fciq"},"OXV5WS-HBVK2-ORYUD2":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440095900.9042,"closetm":1440096481.5734,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.23000","price2":"0","leverage":"none","order":"buy
+        90.00000000 ETHEUR @ limit 1.23000"},"vol":"90.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OFPTDF-XAHLW-ICNAJO":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440095715.2374,"closetm":1440095820.5569,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.20020","price2":"0","leverage":"none","order":"buy
+        92.00000000 ETHEUR @ limit 1.20020"},"vol":"92.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OX3ZV5-7NNET-U7PFWW":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440093332.0178,"closetm":1440095697.6164,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.17002","price2":"0","leverage":"none","order":"buy
+        94.50000000 ETHEUR @ limit 1.17002"},"vol":"94.50000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OBW2DF-PFAKB-H5PXHA":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440093297.1445,"closetm":1440093314.6343,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.23000","price2":"0","leverage":"none","order":"buy
+        90.00000000 ETHEUR @ limit 1.23000"},"vol":"90.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"O5KMUL-3T5Z7-K2S26M":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440093158.4176,"closetm":1440093287.1033,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.22000","price2":"0","leverage":"none","order":"buy
+        90.00000000 ETHEUR @ limit 1.22000"},"vol":"90.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OINAKG-7ILY7-IRD3WP":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440093051.2399,"closetm":1440093141.2097,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.21000","price2":"0","leverage":"none","order":"buy
+        91.00000000 ETHEUR @ limit 1.21000"},"vol":"91.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OPV4OV-6GUMO-3VH55Q":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440092928.5659,"closetm":1440093038.0352,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.20000","price2":"0","leverage":"none","order":"buy
+        92.00000000 ETHEUR @ limit 1.20000"},"vol":"92.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OA2BW2-NQMVT-Z5KUH6":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440090971.8167,"closetm":1440091130.8134,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.19000","price2":"0","leverage":"none","order":"buy
+        92.00000000 ETHEUR @ limit 1.19000"},"vol":"92.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OCDK4J-YUDR4-QPTLOU":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440090769.7386,"closetm":1440090947.4897,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.16002","price2":"0","leverage":"none","order":"buy
+        95.00000000 ETHEUR @ limit 1.16002"},"vol":"95.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"O3NW3J-Y5YJI-3EZB5I":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440090451.322,"closetm":1440090705.0764,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.16000","price2":"0","leverage":"none","order":"buy
+        95.00000000 ETHEUR @ limit 1.16000"},"vol":"95.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OEPPRI-VJOMZ-XZZWBI":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440089897.9085,"closetm":1440090397.347,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.13010","price2":"0","leverage":"none","order":"buy
+        88.48000000 ETHEUR @ limit 1.13010"},"vol":"88.48000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OXSR6A-WEJLR-VF2HJ2":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440089843.2634,"closetm":1440089857.4691,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.13000","price2":"0","leverage":"none","order":"buy
+        88.49000000 ETHEUR @ limit 1.13000"},"vol":"88.49000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"O23UDQ-A73M5-BNZO4C":{"refid":null,"userref":null,"status":"closed","reason":null,"opentm":1440089640.0173,"closetm":1440089663.9192,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.22000","price2":"0","leverage":"none","order":"sell
+        71.00000000 ETHEUR @ limit 1.22000"},"vol":"71.00000000","vol_exec":"71.00000000","cost":"86.62000","fee":"0.13859","price":"1.22000","misc":"","oflags":"fciq"},"O2FGTF-WYTHJ-ETQWK4":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440088974.1477,"closetm":1440089621.4635,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.23485","price2":"0","leverage":"none","order":"sell
+        71.00000000 ETHEUR @ limit 1.23485"},"vol":"71.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OTDBFW-XEM3Q-S7XEJ6":{"refid":null,"userref":null,"status":"canceled","reason":"User
+        canceled","opentm":1440088637.3002,"closetm":1440088948.3429,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.20000","price2":"0","leverage":"none","order":"sell
+        91.00000000 ETHEUR @ limit 1.20000"},"vol":"91.00000000","vol_exec":"20.00000000","cost":"24.00000","fee":"0.03840","price":"1.20000","misc":"partial","oflags":"fciq"}},"count":"62"}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 01:31:18 GMT
+recorded_with: VCR 2.9.3

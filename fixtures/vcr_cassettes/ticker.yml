@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.kraken.com/0/public/Ticker?pair=XXBTZEUR,%20XXBTZGBP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 23 Aug 2015 00:52:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
+        00:52:10 GMT; path=/; domain=.kraken.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - COMPUTED
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"XXBTZEUR":{"a":["204.78800","1","1.000"],"b":["204.24000","1","1.000"],"c":["204.78790","0.18101800"],"v":["51.57752457","4909.96955233"],"p":["204.57146","202.50397"],"t":[74,3233],"l":["203.67282","197.50000"],"h":["204.90670","207.71000"],"o":"203.78392"},"XXBTZGBP":{"a":["178.81600","2","2.000"],"b":["144.58901","2","2.000"],"c":["144.28600","0.05789115"],"v":["0.00000000","0.08645115"],"p":["0.00000","145.17510"],"t":[0,3],"l":["144.28600","144.28600"],"h":["144.28600","148.00000"],"o":"144.28600"}}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 00:52:11 GMT
+recorded_with: VCR 2.9.3

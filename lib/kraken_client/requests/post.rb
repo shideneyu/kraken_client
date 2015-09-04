@@ -17,8 +17,10 @@ module KrakenClient
       def params(options = {})
         params           = {}
 
-        params[:headers] = header_content(options).call
-        params[:body]    = body_content.call
+        header_content   = content_manager::Header.new(config, endpoint_name, options, url)
+
+        params[:headers] = header_content.call
+        params[:body]    = body_content(header_content).call
 
         params
       end
@@ -27,11 +29,7 @@ module KrakenClient
         KrakenClient::Requests::Content
       end
 
-      def header_content(options = nil)
-        @content ||= content_manager::Header.new(config, endpoint_name, options, url)
-      end
-
-      def body_content
+      def body_content(header_content)
         content_manager::Body.new(header_content.send(:encoded_options))
       end
 

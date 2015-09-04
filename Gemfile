@@ -5,3 +5,4 @@ gemspec
 gem 'httparty'
 gem 'hashie'
 gem 'addressable'
+gem 'activesupport', '~> 3.2'

@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'kraken_client/version'
+require 'version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'kraken_client'
@@ -20,12 +20,17 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'spectus'
+  spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'webmock'
+  spec.add_development_dependency 'vcr'
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'codeclimate-test-reporter'
 
   spec.add_dependency 'httparty'
   spec.add_dependency 'hashie'
   spec.add_dependency 'addressable'
-  spec.add_dependency 'pry'
-  spec.add_dependency 'activesupport'
+
+  spec.add_runtime_dependency 'activesupport', '~> 3.2'
 
 end

@@ -1,5 +1,3 @@
-require 'kraken_client/configuration'
-
 module KrakenClient
   module Configurable
 

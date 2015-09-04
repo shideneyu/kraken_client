@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kraken.com/0/private/Balance
+    body:
+      encoding: UTF-8
+      string: nonce=943910730968917668
+    headers:
+      Api-Key:
+      - COMPUTED
+      Api-Sign:
+      - COMPUTED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - COMPUTED
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
+        01:31:14 GMT; path=/; domain=.kraken.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - COMPUTED
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"ZEUR":"1433.0939","XXBT":"0.0000000000","XETH":"99.7497224800"}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 01:31:15 GMT
+recorded_with: VCR 2.9.3

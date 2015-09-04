@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kraken.com/0/private/OpenOrders
+    body:
+      encoding: UTF-8
+      string: nonce=943910732411050556
+    headers:
+      Api-Key:
+      - COMPUTED
+      Api-Sign:
+      - COMPUTED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 23 Aug 2015 01:31:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
+        01:31:16 GMT; path=/; domain=.kraken.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - COMPUTED
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"open":{"O5TDV2-WDYB2-6OGJRD":{"refid":null,"userref":null,"status":"open","opentm":1440292821.4839,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"buy","ordertype":"limit","price":"1.19000","price2":"0","leverage":"none","order":"buy
+        1204.00000000 ETHEUR @ limit 1.19000"},"vol":"1204.00000000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"},"OGAEYL-LVSPL-BYGGRR":{"refid":null,"userref":null,"status":"open","opentm":1440254004.3621,"starttm":0,"expiretm":0,"descr":{"pair":"ETHEUR","type":"sell","ordertype":"limit","price":"1.29000","price2":"0","leverage":"none","order":"sell
+        99.74972000 ETHEUR @ limit 1.29000"},"vol":"99.74972000","vol_exec":"0.00000000","cost":"0.00000","fee":"0.00000","price":"0.00000","misc":"","oflags":"fciq"}}}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 01:31:17 GMT
+recorded_with: VCR 2.9.3

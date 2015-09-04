@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kraken.com/0/private/TradeVolume
+    body:
+      encoding: UTF-8
+      string: nonce=943930453275642101&pair=XETHZEUR
+    headers:
+      Api-Key:
+      - COMPUTED
+      Api-Sign:
+      - COMPUTED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 23 Aug 2015 09:52:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
+        09:52:47 GMT; path=/; domain=.kraken.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - COMPUTED
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"currency":"ZUSD","volume":"3878.8703","fees":{"XETHZEUR":{"fee":"0.2600","minfee":"0.1000","maxfee":"0.2600","nextfee":"0.2400","nextvolume":"10000.0000","tiervolume":"0.0000"}},"fees_maker":{"XETHZEUR":{"fee":"0.1600","minfee":"0.0000","maxfee":"0.1600","nextfee":"0.1400","nextvolume":"10000.0000","tiervolume":"0.0000"}}}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 09:52:48 GMT
+recorded_with: VCR 2.9.3

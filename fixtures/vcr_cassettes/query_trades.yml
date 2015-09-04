@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kraken.com/0/private/QueryTrades
+    body:
+      encoding: UTF-8
+      string: nonce=943927762899308048&txid=THZPTW-BMF6X-VWMN5P
+    headers:
+      Api-Key:
+      - COMPUTED
+      Api-Sign:
+      - COMPUTED
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Sun, 23 Aug 2015 08:44:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=COMPUTED; expires=Mon, 22-Aug-16
+        08:44:22 GMT; path=/; domain=.kraken.com; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Cf-Ray:
+      - COMPUTED
+    body:
+      encoding: UTF-8
+      string: '{"error":[],"result":{"THZPTW-BMF6X-VWMN5P":{"ordertxid":"OK6CDT-GXMY5-JI2GR2","pair":"XETHZEUR","time":1440317999.2062,"type":"buy","ordertype":"limit","price":"1.21985","cost":"6.09925","fee":"0.01586","vol":"5.00000000","margin":"0.00000","misc":""}}}'
+    http_version: 
+  recorded_at: Sun, 23 Aug 2015 08:44:23 GMT
+recorded_with: VCR 2.9.3
