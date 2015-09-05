@@ -4,7 +4,7 @@ module KrakenClient
 
       def perform(endpoint_name, args)
         url      = config.base_uri + url_path(endpoint_name)
-        response = Hashie::Mash.new(request_manager.call(url, endpoint_name, args))
+        Hashie::Mash.new(request_manager.call(url, endpoint_name, args))
       end
 
       def data

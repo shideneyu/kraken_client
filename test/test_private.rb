@@ -57,7 +57,7 @@ VCR.use_cassette("query_ledgers") do
   Spectus.this do
     ledger = client.query_ledgers(id: 'LRSNYS-DICDD-3QM34P')
     ledger['LRSNYS-DICDD-3QM34P'].class
-   end.MUST Equal: Hashie::Mash
+  end.MUST Equal: Hashie::Mash
 end
 
 # Trade Volume

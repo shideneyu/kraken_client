@@ -6,7 +6,6 @@ client = kraken.public
 # Server Time
 VCR.use_cassette("server_time") do
   kraken_time = DateTime.parse(client.server_time.rfc1123)
-  utc_time = Time.now.getutc
   Spectus.this { kraken_time.day.class }.MUST Equal: Fixnum
   Spectus.this { kraken_time.hour.class }.MUST Equal: Fixnum
 end

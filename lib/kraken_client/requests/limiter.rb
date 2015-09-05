@@ -55,23 +55,23 @@ module KrakenClient
       end
 
       def counter_total
-        @counter ||= case config.tier
-          when 0 then 10
-          when 1 then 10
-          when 2 then 10
-          when 3 then 20
-          when 4 then 20
-        end
+        @counter ||=  case config.tier
+                        when 0 then 10
+                        when 1 then 10
+                        when 2 then 10
+                        when 3 then 20
+                        when 4 then 20
+                      end
       end
 
       def seconds_to_decrement
-        @decrement ||= case config.tier
-          when 0 then 5
-          when 1 then 5
-          when 2 then 5
-          when 3 then 2
-          when 4 then 1
-        end
+        @decrement ||=  case config.tier
+                          when 0 then 5
+                          when 1 then 5
+                          when 2 then 5
+                          when 3 then 2
+                          when 4 then 1
+                        end
       end
     end
   end
