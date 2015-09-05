@@ -92,8 +92,7 @@ You can also pass any of those options inline when loading an instance of Kraken
 KrakenClient.load({base_uri: 'https://api.kraken.com', tier: 3}).config.tier
 ```
 
-
-**/!\\ Important Note /!\\** If you wish to use the Private Endpoints, you need to specify an API Key, or an exception will be raised.
+:warning: **Important Note** :warning:: If you wish to use the Private Endpoints, you need to specify an API Key, or an exception will be raised.
 
 ### Call Rate Limiter ###
 
