@@ -312,6 +312,22 @@ Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other
 
 If you want to be part of those credits, do not hesitate to contribute by doing some pull requests ;) !
 
+## Security
+
+As a basic form of security __KrakenClient__ provides a set of SHA512 checksums for
+every Gem release.  These checksums can be found in the `checksum/` directory.
+Although these checksums do not prevent malicious users from tampering with a
+built Gem they can be used for basic integrity verification purposes.
+
+The checksum of a file can be checked using the `sha512sum` command.  For
+example:
+
+    $ sha512sum pkg/kraken_client-0.0.1.gem
+    d12d7d9c2a4fdfe075cbb7a141fa5f2195175891e4098c7e1a28c8bca655ab44fb9d67b6a2e3991d0f852026c5e4537fdf7e314575c68d1c80b3a4b1eb1c041f  pkg/kraken_client-0.0.1.gem
+
+## Versioning
+
+__KrakenClient__ follows [Semantic Versioning 2.0](http://semver.org/).
 
 ## Contributing
 
