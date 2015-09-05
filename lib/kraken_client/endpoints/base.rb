@@ -24,7 +24,7 @@ module KrakenClient
 
             perform(method.to_s, args)
           end
-        end      
+        end
       end
 
       def type

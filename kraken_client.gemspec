@@ -1,16 +1,11 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'version'
-
 Gem::Specification.new do |spec|
   spec.name          = 'kraken_client'
-  spec.version       = KrakenClient::VERSION
+  spec.version       = File.read('VERSION.semver').chomp
   spec.authors       = ['Sidney SISSAOUI']
   spec.email         = ['shideneyu@gmail.com']
   spec.description   = %q{'Wrapper for Kraken Exchange API'}
   spec.summary       = %q{'Wrapper for Kraken Exchange API'}
-  spec.homepage      = 'https://www.kraken.com/help/api'
+  spec.homepage      = 'https://github.com/shideneyu/kraken_client'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/).delete_if { |f| f =~ /\.gem$/ }

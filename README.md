@@ -7,7 +7,7 @@
 
 ![kraken_client_blob](http://image.noelshack.com/fichiers/2015/34/1440350422-kraken3.png)
 
-__KrakenClient__ is a Ruby wrapper of the [Kraken API](https://support.kraken.com/hc/en-us/articles/206548367-What-is-the-API-call-rate-limit-). 
+__KrakenClient__ is a Ruby wrapper of the [Kraken API](https://support.kraken.com/hc/en-us/articles/206548367-What-is-the-API-call-rate-limit-).
 [Kraken](https://www.kraken.com/) is a market exchange site serving those trading with Crypto-Currencies, such as **Bitcoin**.
 
 It is a robust gem, and tested using the Awesome [Spectus gem](https://github.com/fixrb/spectus).
@@ -93,7 +93,7 @@ KrakenClient.load({base_uri: 'https://api.kraken.com', tier: 3}).config.tier
 ```
 
 
-**/!\\ Important Note /!\\** If you wish to use the Private Endpoints, you need to specify an API Key, or an exception will be raised. 
+**/!\\ Important Note /!\\** If you wish to use the Private Endpoints, you need to specify an API Key, or an exception will be raised.
 
 ### Call Rate Limiter ###
 
@@ -306,7 +306,7 @@ Donate here: https://www.coinbase.com/shideneyu
 
 ## Credits
 
-This gem has been made by [Sidney SISSAOUI (shideneyu)](https://github.com/shideneyu). 
+This gem has been made by [Sidney SISSAOUI (shideneyu)](https://github.com/shideneyu).
 
 Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other [kraken_ruby](https://github.com/leishman/kraken_ruby/graphs/contributors)  contributors for their gem, which helped me to have a nice skeleton to begin **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
 

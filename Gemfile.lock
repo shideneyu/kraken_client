@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kraken_client (1.0.3)
+    kraken_client (1.1.0)
       activesupport (~> 3.2)
       addressable
       hashie
@@ -64,3 +64,6 @@ DEPENDENCIES
   spectus
   vcr
   webmock
+
+BUNDLED WITH
+   1.10.6

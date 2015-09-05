@@ -5,12 +5,12 @@ client = kraken.private
 
 # User Balance
 VCR.use_cassette("balance") do
-  Spectus.this { client.balance.class }.MUST Equal: Hashie::Mash 
+  Spectus.this { client.balance.class }.MUST Equal: Hashie::Mash
 end
 
 # Trade Balance
 VCR.use_cassette("trade_balance") do
-  Spectus.this { client.trade_balance.c }.MUST Eql: '0.0000' 
+  Spectus.this { client.trade_balance.c }.MUST Eql: '0.0000'
 end
 
 # Open Orders
