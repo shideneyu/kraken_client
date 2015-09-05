@@ -27,5 +27,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'addressable'
 
   spec.add_runtime_dependency 'activesupport', '~> 3.2'
-
 end
