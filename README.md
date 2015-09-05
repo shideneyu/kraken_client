@@ -14,6 +14,7 @@ It is a robust gem, and tested using the Awesome [Spectus gem](https://github.co
 
 ## Summary
 
+* [Security](#security)
 * [Installation](#installation)
 * [Usage](#usage)
   * [Configuration](#configuration)
@@ -44,6 +45,19 @@ It is a robust gem, and tested using the Awesome [Spectus gem](https://github.co
 * [Credits](#credits)
 * [Contributing](#contributing)
 * [License](#license)
+
+## Security
+
+As a basic form of security __KrakenClient__ provides a set of SHA512 checksums for
+every Gem release.  These checksums can be found in the `checksum/` directory.
+Although these checksums do not prevent malicious users from tampering with a
+built Gem they can be used for basic integrity verification purposes.
+
+The checksum of a file can be checked using the `sha512sum` command.  For
+example:
+
+    $ sha512sum pkg/kraken_client-1.1.0.gem
+    d1b055b091443b862d88028cb517410be016264295950de4cf7973686063e031dfc619cfa7970dca8d4081f82bf6856339b9f35fef356ecce7c42f1ebb3f3b7f  pkg/kraken_client-1.1.0.gem
 
 
 ## Installation
@@ -310,19 +324,6 @@ This gem has been made by [Sidney SISSAOUI (shideneyu)](https://github.com/shide
 Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other [kraken_ruby](https://github.com/leishman/kraken_ruby/graphs/contributors)  contributors for their gem, which helped me to have a nice skeleton to begin **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
 
 If you want to be part of those credits, do not hesitate to contribute by doing some pull requests ;) !
-
-## Security
-
-As a basic form of security __KrakenClient__ provides a set of SHA512 checksums for
-every Gem release.  These checksums can be found in the `checksum/` directory.
-Although these checksums do not prevent malicious users from tampering with a
-built Gem they can be used for basic integrity verification purposes.
-
-The checksum of a file can be checked using the `sha512sum` command.  For
-example:
-
-    $ sha512sum pkg/kraken_client-1.1.0.gem
-    d1b055b091443b862d88028cb517410be016264295950de4cf7973686063e031dfc619cfa7970dca8d4081f82bf6856339b9f35fef356ecce7c42f1ebb3f3b7f  pkg/kraken_client-1.1.0.gem
 
 ## Versioning
 
