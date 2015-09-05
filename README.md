@@ -92,8 +92,7 @@ You can also pass any of those options inline when loading an instance of Kraken
 KrakenClient.load({base_uri: 'https://api.kraken.com', tier: 3}).config.tier
 ```
 
-
-**/!\\ Important Note /!\\** If you wish to use the Private Endpoints, you need to specify an API Key, or an exception will be raised.
+:warning: **Important Note** :warning:: If you wish to use the Private Endpoints, you need to specify an API Key, or an exception will be raised.
 
 ### Call Rate Limiter ###
 
@@ -312,6 +311,22 @@ Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other
 
 If you want to be part of those credits, do not hesitate to contribute by doing some pull requests ;) !
 
+## Security
+
+As a basic form of security __KrakenClient__ provides a set of SHA512 checksums for
+every Gem release.  These checksums can be found in the `checksum/` directory.
+Although these checksums do not prevent malicious users from tampering with a
+built Gem they can be used for basic integrity verification purposes.
+
+The checksum of a file can be checked using the `sha512sum` command.  For
+example:
+
+    $ sha512sum pkg/kraken_client-1.1.0.gem
+    d1b055b091443b862d88028cb517410be016264295950de4cf7973686063e031dfc619cfa7970dca8d4081f82bf6856339b9f35fef356ecce7c42f1ebb3f3b7f  pkg/kraken_client-1.1.0.gem
+
+## Versioning
+
+__KrakenClient__ follows [Semantic Versioning 2.0](http://semver.org/).
 
 ## Contributing
 

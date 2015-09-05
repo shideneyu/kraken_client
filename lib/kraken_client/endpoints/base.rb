@@ -19,7 +19,7 @@ module KrakenClient
 
       def set_methods
         data.each do |method, method_alias|
-           self.class.send(:define_method, Array(method_alias).first) do |args = {}|
+          self.class.send(:define_method, Array(method_alias).first) do |args = {}|
             raise_exception(Array(method_alias).last, args)
 
             perform(method.to_s, args)

@@ -20,12 +20,10 @@ module KrakenClient
         "KrakenClient::Requests::#{type}".constantize.new(config, type)
       end
 
-      def call(url, endpoint_name, options = nil)
+      def call(url, _endpoint_name, _options = nil)
         changed
         notify_observers(url.split('/').last)
       end
-
-      private
 
       def self.type(given_type)
         given_type == 'Public' ? 'Get' : 'Post'
