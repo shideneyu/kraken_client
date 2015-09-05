@@ -322,8 +322,8 @@ built Gem they can be used for basic integrity verification purposes.
 The checksum of a file can be checked using the `sha512sum` command.  For
 example:
 
-    $ sha512sum pkg/kraken_client-0.0.1.gem
-    d12d7d9c2a4fdfe075cbb7a141fa5f2195175891e4098c7e1a28c8bca655ab44fb9d67b6a2e3991d0f852026c5e4537fdf7e314575c68d1c80b3a4b1eb1c041f  pkg/kraken_client-0.0.1.gem
+    $ sha512sum pkg/kraken_client-1.1.0.gem
+    d1b055b091443b862d88028cb517410be016264295950de4cf7973686063e031dfc619cfa7970dca8d4081f82bf6856339b9f35fef356ecce7c42f1ebb3f3b7f  pkg/kraken_client-1.1.0.gem
 
 ## Versioning
 
