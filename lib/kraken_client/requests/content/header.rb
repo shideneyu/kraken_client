@@ -37,7 +37,7 @@ module KrakenClient
 
         def encoded_options
           uri = Addressable::URI.new
-          uri.query_values = options
+          uri.query_hash = options
           uri.query
         end
 
