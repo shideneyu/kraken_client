@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'httparty'
   spec.add_dependency 'hashie'
-  spec.add_dependency 'addressable'
+  spec.add_dependency 'addressabler'
 
   spec.add_runtime_dependency 'activesupport', '~> 3.2'
 end

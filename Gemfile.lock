@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    kraken_client (1.1.0)
+    kraken_client (1.1.1)
       activesupport (~> 3.2)
-      addressable
+      addressabler
       hashie
       httparty
 
@@ -14,6 +14,8 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     addressable (2.3.8)
+    addressabler (0.1.2)
+      addressable (>= 2.3)
     ast (2.1.0)
     astrolabe (1.3.1)
       parser (~> 2.2)
@@ -23,8 +25,8 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     docile (1.1.5)
-    hashie (3.4.2)
-    httparty (0.13.5)
+    hashie (3.4.3)
+    httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
@@ -81,4 +83,4 @@ DEPENDENCIES
   yard (~> 0.8)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

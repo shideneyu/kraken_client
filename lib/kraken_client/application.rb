@@ -1,7 +1,7 @@
 require 'active_support/inflector'
 require 'base64'
 require 'securerandom'
-require 'addressable/uri'
+require 'addressabler'
 require 'httparty'
 require 'hashie'
 require 'pry'
