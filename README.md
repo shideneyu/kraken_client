@@ -245,7 +245,7 @@ orders = client.private.query_orders(txid: ids)
 Get array of all trades
 
 ```ruby
-trades = client.private.trade_history
+trades = client.private.trades_history
 ```
 
 ##### Query Trades
