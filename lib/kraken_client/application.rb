@@ -4,8 +4,6 @@ require 'securerandom'
 require 'addressabler'
 require 'httparty'
 require 'hashie'
-require 'pry'
-
 
 module KrakenClient
   class Application
