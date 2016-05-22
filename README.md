@@ -171,7 +171,7 @@ pairs = client.public.asset_pairs
 ##### Ticker Information
 
 ```ruby
-ticker_data = client.public.ticker('XLTCXXDG, ZUSDXXVN')
+ticker_data = client.public.ticker('ETHXBT, XBTLTC')
 ```
 
 ##### Order Book
@@ -179,7 +179,7 @@ ticker_data = client.public.ticker('XLTCXXDG, ZUSDXXVN')
 Get market depth information for given asset pairs
 
 ```ruby
-depth_data = client.public.order_book('LTCXRP')
+depth_data = client.public.order_book('ETHXBT')
 ```
 
 ##### Trades
@@ -187,7 +187,7 @@ depth_data = client.public.order_book('LTCXRP')
 Get recent trades
 
 ```ruby
-trades = client.public.trades('LTCXRP')
+trades = client.public.trades('ETHXBT')
 ```
 
 ##### Spread
@@ -195,7 +195,7 @@ trades = client.public.trades('LTCXRP')
 Get spread data for a given asset pair
 
 ```ruby
-spread = client.public.spread('LTCXRP')
+spread = client.public.spread('ETHXBT')
 ```
 
 
@@ -293,7 +293,7 @@ There are 4 required parameters for buying an order. The example below illustrat
 ```ruby
 # buying 0.01 XBT (bitcoin) for XRP (ripple) at market price
 opts = {
-  pair: 'XBTXRP',
+  pair: 'ETHXBT',
   type: 'buy',
   ordertype: 'market',
   volume: 0.01
