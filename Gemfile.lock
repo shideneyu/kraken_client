@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kraken_client (1.1.4)
+    kraken_client (1.1.5)
       activesupport (>= 3.2)
       addressabler
       hashie
@@ -20,13 +20,11 @@ GEM
     addressabler (0.1.2)
       addressable (>= 2.3)
     ast (2.2.0)
-    aw (0.1.0)
     codeclimate-test-reporter (0.5.0)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    defi (1.1.2)
     docile (1.1.5)
     hashdiff (0.3.0)
     hashie (3.4.4)
@@ -35,7 +33,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
     json (1.8.3)
-    matchi (1.0.1)
+    matchi (0.0.9)
     method_source (0.8.2)
     minitest (5.9.0)
     multi_xml (0.5.5)
@@ -62,10 +60,8 @@ GEM
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
     slop (3.6.0)
-    spectus (3.0.5)
-      aw (~> 0.1.0)
-      defi (~> 1.1.0)
-      matchi (~> 1.0.1)
+    spectus (2.3.1)
+      matchi (~> 0.0)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -88,7 +84,7 @@ DEPENDENCIES
   rake
   rubocop (~> 0.34)
   simplecov
-  spectus
+  spectus (~> 2.3.1)
   vcr
   webmock
   yard (~> 0.8)

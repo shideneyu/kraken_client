@@ -65,7 +65,7 @@ example:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'kraken_client', '~> 1.1.4'
+gem 'kraken_client', '~> 1.1.5'
 ```
 
 And then execute:
