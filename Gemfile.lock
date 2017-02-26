@@ -26,16 +26,15 @@ GEM
     concurrent-ruby (1.0.4)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    docile (1.1.5)
     hashdiff (0.3.2)
     hashie (3.5.5)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     i18n (0.8.1)
-    json (2.0.3)
     matchi (0.1.2)
     method_source (0.8.2)
     minitest (5.10.1)
+    multi_json (1.12.1)
     multi_xml (0.6.0)
     parser (2.4.0.0)
       ast (~> 2.2)
@@ -55,11 +54,10 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
     safe_yaml (1.0.4)
-    simplecov (0.13.0)
-      docile (~> 1.1.0)
-      json (>= 1.8, < 3)
-      simplecov-html (~> 0.10.0)
-    simplecov-html (0.10.0)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
     slop (3.6.0)
     spectus (2.3.1)
       matchi (~> 0.0)
@@ -84,7 +82,7 @@ DEPENDENCIES
   pry
   rake
   rubocop (~> 0.34)
-  simplecov
+  simplecov (~> 0.7.1)
   spectus (~> 2.3.1)
   vcr
   webmock
