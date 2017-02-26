@@ -171,7 +171,7 @@ pairs = client.public.asset_pairs
 ##### Ticker Information
 
 ```ruby
-ticker_data = client.public.ticker('ETHXBT, XBTLTC')
+ticker_data = client.public.ticker('ETHXBT, LTCXBT')
 ```
 
 ##### Order Book
