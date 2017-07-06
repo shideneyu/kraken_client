@@ -80,6 +80,21 @@ VCR.use_cassette("add_order") do
   end.MUST Eql: ['OEDIZV-VDAW3-RHLJVB']
 end
 
+# Add Order: error - insufficient funds
+VCR.use_cassette("add_order_error_insufficient_funds") do
+  Spectus.this do
+
+    opts = {
+      pair: 'ETHEUR',
+      type: 'buy',
+      ordertype: 'market',
+      volume: 0.01
+    }
+
+    client.add_order(opts)
+  end.MUST RaiseException: KrakenClient::ErrorResponse
+end
+
 # Cancel Order
 VCR.use_cassette("cancel_order") do
   Spectus.this do
