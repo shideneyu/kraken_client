@@ -14,6 +14,7 @@ module KrakenClient
           :AssetPairs => :asset_pairs,
           :Depth      => :order_book,
           :Ticker     => :ticker,
+          :OHLC       => [:ohlc,  params: [:pair, :last, :interval]],
           :Trades     => :trades,
           :Spread     => :spread,
           :Assets     => :assets,

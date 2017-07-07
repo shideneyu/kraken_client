@@ -26,6 +26,12 @@ VCR.use_cassette("ticker") do
   Spectus.this { result.XXBTZGBP.a.class }.MUST Equal: Array
 end
 
+# Ohlc
+VCR.use_cassette("ohlc") do
+  ohlc_data = client.ohlc(pair: 'XXBTZEUR', last: '1499436000', interval: '60')
+  Spectus.this { ohlc_data.class }.MUST Equal: Hashie::Mash
+end
+
 # Order Book
 VCR.use_cassette("order_book") do
   order_book = client.order_book(pair: 'XXBTZEUR')
