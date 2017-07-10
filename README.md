@@ -24,6 +24,7 @@ It is a robust gem, and tested using the Awesome [Spectus gem](https://github.co
         * [Asset Info](#asset-info)
         * [Asset Pairs](#asset-pairs)
         * [Ticker Information](#ticker-information)
+        * [OHLC Data](#ohlc-data)
         * [Order Book](#order-book)
         * [Trades](#trades)
         * [Spread](#spread)
@@ -172,6 +173,12 @@ pairs = client.public.asset_pairs
 
 ```ruby
 ticker_data = client.public.ticker('ETHXBT, LTCXBT')
+```
+
+##### OHLC Data
+
+```ruby
+ohlc_data = client.public.ohlc(pair: 'XXBTZEUR', last: '1499436000', interval: '60')
 ```
 
 ##### Order Book
