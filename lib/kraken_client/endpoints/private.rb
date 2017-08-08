@@ -8,6 +8,8 @@ module KrakenClient
 
         if response.is_a?(Array) && response.first.match(/^E[\w]+:/)
           fail ErrorResponse.new(response.first)
+        elsif response == "error"
+          fail ErrorResponse.new(response)
         else
           Hashie::Mash.new(response)
         end
