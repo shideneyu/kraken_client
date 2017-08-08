@@ -312,7 +312,8 @@ client.private.add_order(opts)
 ##### Cancel Order
 
 ```ruby
-client.private.cancel_order("UKIYSP-9VN27-AJWWYC")
+Same as with `add_order`, but the only required parameter is `txid`, refering to the order identifier.
+client.private.cancel_order(txid: "UKIYSP-9VN27-AJWWYC")
 ```
 
 ## Donations
