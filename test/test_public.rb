@@ -23,7 +23,7 @@ end
 # Ticker
 VCR.use_cassette("ticker") do
   result = client.ticker(pair: 'XXBTZEUR, XXBTZGBP')
-  Spectus.this { result.XXBTZGBP.a.class }.MUST Equal: Array
+  Spectus.this { result.XXBTZGBP.a.class }.MUST Equal: Hashie::Array
 end
 
 # Ohlc
@@ -35,17 +35,17 @@ end
 # Order Book
 VCR.use_cassette("order_book") do
   order_book = client.order_book(pair: 'XXBTZEUR')
-  Spectus.this { order_book.XXBTZEUR.asks.class }.MUST Equal: Array
+  Spectus.this { order_book.XXBTZEUR.asks.class }.MUST Equal: Hashie::Array
 end
 
 # Trades
 VCR.use_cassette("trades") do
   trades = client.trades(pair: 'XXBTZEUR')
-  Spectus.this { trades.XXBTZEUR.class }.MUST Equal: Array
+  Spectus.this { trades.XXBTZEUR.class }.MUST Equal: Hashie::Array
 end
 
 # Spread
 VCR.use_cassette("spread") do
   spread = client.spread(pair: 'XXBTZEUR')
-  Spectus.this { spread.XXBTZEUR.class }.MUST Equal: Array
+  Spectus.this { spread.XXBTZEUR.class }.MUST Equal: Hashie::Array
 end

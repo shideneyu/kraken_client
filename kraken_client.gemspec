@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'yard', '~> 0.8'
   spec.add_development_dependency 'simplecov', '~> 0.7.1'
   spec.add_development_dependency 'codeclimate-test-reporter'
-  spec.add_development_dependency 'rubocop', '~> 0.34'
 
   spec.add_dependency 'httparty'
   spec.add_dependency 'hashie'
