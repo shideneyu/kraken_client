@@ -40,6 +40,7 @@ module KrakenClient
 
     def set_config(params)
       params.each { |k, v| config.send("#{k}=", v) }
+      config.limiter_interface = KrakenClient::Requests::Limiter.new(config)
     end
   end
 end
