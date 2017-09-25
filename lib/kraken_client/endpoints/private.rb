@@ -11,7 +11,7 @@ module KrakenClient
         elsif response == "error"
           fail ErrorResponse.new(response)
         else
-          Hashie::Mash.new(response)
+          response.with_indifferent_access
         end
       end
 

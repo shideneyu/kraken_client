@@ -4,7 +4,7 @@ module KrakenClient
 
       def perform(endpoint_name, args)
         response = request_manager.call(url(endpoint_name), args)
-        hash = Hashie::Mash.new(JSON.parse(response.body))
+        hash = JSON.parse(response.body).with_indifferent_access
         hash[:result]
       end
 

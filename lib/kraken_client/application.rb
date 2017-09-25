@@ -1,4 +1,5 @@
 require 'active_support/inflector'
+require 'active_support/core_ext/hash'
 require 'base64'
 require 'securerandom'
 require 'addressabler'
