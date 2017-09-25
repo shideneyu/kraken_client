@@ -2,8 +2,6 @@ require 'bundler/gem_tasks'
 require 'rake/testtask'
 require 'rubocop/rake_task'
 
-RuboCop::RakeTask.new
-
 Rake::TestTask.new do |t|
   t.verbose = true
   t.warning = false
@@ -18,4 +16,4 @@ namespace :test do
 end
 
 task(:doc_stats) { ruby '-S yard stats' }
-task default: [:test, :doc_stats, :rubocop]
+task default: [:test, :doc_stats]
