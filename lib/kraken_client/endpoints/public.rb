@@ -8,7 +8,7 @@ module KrakenClient
           hash = JSON.parse(response.body).with_indifferent_access
           return hash[:result]
         end
-        return nil
+        raise KrakenClient::Exception, "Response status #{response.status} received."
       end
 
       def data
