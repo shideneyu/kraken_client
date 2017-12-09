@@ -4,8 +4,11 @@ module KrakenClient
 
       def perform(endpoint_name, args)
         response = request_manager.call(url(endpoint_name), args)
-        hash = JSON.parse(response.body).with_indifferent_access
-        hash[:result]
+        if response.status == 200
+          hash = JSON.parse(response.body).with_indifferent_access
+          return hash[:result]
+        end
+        raise KrakenClient::Exception, "Response status #{response.status} received."
       end
 
       def data
