@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry'
   spec.add_development_dependency 'webmock'
   spec.add_development_dependency 'vcr'
-  spec.add_development_dependency 'yard', '~> 0.8'
+  spec.add_development_dependency 'yard', '~> 0.9.11'
   spec.add_development_dependency 'simplecov', '~> 0.7.1'
   spec.add_development_dependency 'codeclimate-test-reporter'
 
