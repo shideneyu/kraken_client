@@ -4,7 +4,7 @@ module KrakenClient
 
       def perform(endpoint_name, args)
         response = request_manager.call(url(endpoint_name), args)
-        if response.code == 200
+        if response.success?
           hash = JSON.parse(response.body).with_indifferent_access
           return hash[:result]
         end
