@@ -4,7 +4,7 @@ module KrakenClient
 
       def perform(endpoint_name, args)
         response = request_manager.call(url(endpoint_name), args)
-        return response.parsed_response if response.code == 200
+        return JSON.parse(response.body).with_indifferent_access if response.code == 200
         raise KrakenClient::Exception, "Response status #{response.status} received."
       end
 
