@@ -15,7 +15,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     addressabler (0.1.2)
       addressable (>= 2.3)
     codeclimate-test-reporter (0.5.0)
@@ -37,6 +38,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    public_suffix (4.0.6)
     rake (11.1.2)
     safe_yaml (1.0.4)
     simplecov (0.7.1)
@@ -54,7 +56,7 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    yard (0.8.7.6)
+    yard (0.9.26)
 
 PLATFORMS
   ruby
@@ -69,7 +71,7 @@ DEPENDENCIES
   spectus (~> 2.3.1)
   vcr
   webmock
-  yard (~> 0.8)
+  yard (~> 0.9.11)
 
 BUNDLED WITH
    1.14.5
