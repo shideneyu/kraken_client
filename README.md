@@ -325,8 +325,6 @@ Donate here: https://www.coinbase.com/shideneyu
 
 ## Credits
 
-This gem has been made by [Sidney SISSAOUI (shideneyu)](https://github.com/shideneyu).
-
 Special credits goes to [Alexander LEISHMAN](http://alexleishman.com/) and other [kraken_ruby](https://github.com/leishman/kraken_ruby/graphs/contributors)  contributors for their gem, which helped me to have a nice skeleton to begin **KrakenClient**. It would have been difficult for me to sign the requests if it wasn't thanks to their work.
 
 If you want to be part of those credits, do not hesitate to contribute by doing some pull requests ;) !
