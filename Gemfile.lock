@@ -9,28 +9,28 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.6)
-      i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
-      minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
-      tzinfo (~> 1.1)
+    activesupport (7.0.4.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
     addressable (2.4.0)
     addressabler (0.1.2)
       addressable (>= 2.3)
     codeclimate-test-reporter (0.5.0)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.1)
+    concurrent-ruby (1.1.10)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     hashdiff (0.3.0)
     httparty (0.15.5)
       multi_xml (>= 0.5.2)
-    i18n (0.8.1)
-    json (1.8.6)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
     matchi (0.0.9)
     method_source (0.8.2)
-    minitest (5.10.2)
+    minitest (5.17.0)
     multi_json (1.12.1)
     multi_xml (0.6.0)
     pry (0.10.3)
@@ -46,15 +46,16 @@ GEM
     slop (3.6.0)
     spectus (2.3.1)
       matchi (~> 0.0)
-    thread_safe (0.3.6)
-    tzinfo (1.2.3)
-      thread_safe (~> 0.1)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
     vcr (3.0.3)
     webmock (2.0.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    yard (0.8.7.6)
+    webrick (1.7.0)
+    yard (0.9.28)
+      webrick (~> 1.7.0)
 
 PLATFORMS
   ruby
@@ -69,7 +70,7 @@ DEPENDENCIES
   spectus (~> 2.3.1)
   vcr
   webmock
-  yard (~> 0.8)
+  yard (~> 0.9.11)
 
 BUNDLED WITH
    1.14.5
