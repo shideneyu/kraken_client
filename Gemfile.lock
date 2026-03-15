@@ -24,12 +24,14 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     hashdiff (0.3.0)
-    httparty (0.15.5)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     i18n (0.8.1)
     json (1.8.6)
     matchi (0.0.9)
     method_source (0.8.2)
+    mini_mime (1.1.2)
     minitest (5.10.2)
     multi_json (1.12.1)
     multi_xml (0.6.0)
@@ -54,7 +56,9 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    yard (0.8.7.6)
+    webrick (1.7.0)
+    yard (0.9.28)
+      webrick (~> 1.7.0)
 
 PLATFORMS
   ruby
@@ -69,7 +73,7 @@ DEPENDENCIES
   spectus (~> 2.3.1)
   vcr
   webmock
-  yard (~> 0.8)
+  yard (~> 0.9.11)
 
 BUNDLED WITH
    1.14.5
